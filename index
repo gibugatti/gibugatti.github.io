@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Giulia - Portfólio</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Giulia</h1>
+        <p>Desenvolvedora de Software | Inteligência Artificial</p>
+    </header>
+    
+    <section class="about">
+        <h2>Sobre Mim</h2>
+        <p>Sou estudante de IA e desenvolvedora com experiência em Python, C, C++, Java e JavaScript. Apaixonada por ciência de dados e machine learning.</p>
+    </section>
+    
+    <section class="skills">
+        <h2>Habilidades</h2>
+        <ul>
+            <li>Python, C, C++, Java, JavaScript</li>
+            <li>Machine Learning e Ciência de Dados</li>
+            <li>Banco de Dados SQL</li>
+            <li>Desenvolvimento Front-end e Back-end</li>
+            <li>Cloud Computing</li>
+        </ul>
+    </section>
+    
+    <section class="education">
+        <h2>Formação Acadêmica</h2>
+        <p>Estudante de Engenharia de Software na 42 | FIAP, com foco em Inteligência Artificial.</p>
+    </section>
+    
+    <section class="languages">
+        <h2>Idiomas</h2>
+        <ul>
+            <li>Português - Nativo</li>
+            <li>Inglês - Avançado</li>
+        </ul>
+    </section>
+    
+    <section class="portfolio">
+        <h2>Portfólio</h2>
+        <p>Aqui estão alguns dos meus projetos:</p>
+        <ul>
+            <li><a href="https://github.com/seuusuario/projeto1" target="_blank">Projeto 1</a></li>
+            <li><a href="https://github.com/seuusuario/projeto2" target="_blank">Projeto 2</a></li>
+            <li><a href="https://github.com/seuusuario/projeto3" target="_blank">Projeto 3</a></li>
+        </ul>
+    </section>
+    
+    <section class="contact">
+        <h2>Contato</h2>
+        <p>Email: seuemail@gmail.com</p>
+        <p>Telefone: (XX) XXXXX-XXXX</p>
+    </section>
+    
+    <section class="resume">
+        <h2>Currículo</h2>
+        <a href="seu_curriculo.pdf" download>Baixar Currículo</a>
+    </section>
+    
+    <footer>
+        <p>&copy; 2025 Giulia - Todos os direitos reservados.</p>
+    </footer>
+</body>
+</html>
