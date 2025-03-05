@@ -1,0 +1,89 @@
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Orbitron', sans-serif;
+}
+
+body {
+    background-color: #000;
+    color: #0ff;
+    text-align: center;
+    padding: 20px;
+}
+
+header {
+    padding: 40px 0;
+    font-size: 1.5em;
+}
+
+h1 {
+    font-size: 3em;
+    text-transform: uppercase;
+    color: #0ff;
+}
+
+h2 {
+    color: #fff;
+    margin-top: 30px;
+    font-size: 2em;
+}
+
+p {
+    font-size: 1.2em;
+    margin: 10px 0;
+    color: #ddd;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+ul li {
+    font-size: 1.2em;
+    margin: 5px 0;
+}
+
+a {
+    color: #0ff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+a:hover {
+    color: #ff0;
+}
+
+section {
+    margin: 40px auto;
+    padding: 20px;
+    width: 80%;
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+    box-shadow: 0 0 10px #0ff;
+}
+
+.resume a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: #0ff;
+    color: #000;
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+.resume a:hover {
+    background: #ff0;
+    color: #000;
+}
+
+footer {
+    margin-top: 50px;
+    padding: 20px;
+    font-size: 1em;
+}
