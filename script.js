@@ -9,21 +9,17 @@ document.addEventListener("DOMContentLoaded", function() {
                 setTimeout(type, speed);
             }
         }
-        element.innerHTML = ""; // Limpa antes de iniciar
+        element.innerHTML = "";
         type();
     }
 
     const title = document.querySelector("h1");
     if (title) {
-        typeWriterEffect(title, "Giulia", 150);
+        typeWriterEffect(title, "Giulia", 100);
     }
 
     // Efeito de fade-in ao rolar a página
     const sections = document.querySelectorAll(".animate-slide");
-    const options = {
-        threshold: 0.3
-    };
-
     const observer = new IntersectionObserver(function(entries, observer) {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -31,19 +27,20 @@ document.addEventListener("DOMContentLoaded", function() {
                 observer.unobserve(entry.target);
             }
         });
-    }, options);
+    }, { threshold: 0.2 });
 
     sections.forEach(section => {
         observer.observe(section);
     });
 
-    // Efeito de hover nos links do portfólio
+    // Animação de hover nos links do portfólio
     document.querySelectorAll(".portfolio a").forEach(link => {
-        link.addEventListener("mouseover", () => {
+        link.addEventListener("mouseenter", () => {
+            link.style.transition = "all 0.3s ease";
             link.style.color = "#ff0";
             link.style.transform = "scale(1.1)";
         });
-        link.addEventListener("mouseout", () => {
+        link.addEventListener("mouseleave", () => {
             link.style.color = "#0ff";
             link.style.transform = "scale(1)";
         });
@@ -52,13 +49,26 @@ document.addEventListener("DOMContentLoaded", function() {
     // Botão de download com animação
     const resumeButton = document.querySelector(".resume a");
     if (resumeButton) {
-        resumeButton.addEventListener("mouseover", () => {
+        resumeButton.addEventListener("mouseenter", () => {
+            resumeButton.style.transition = "all 0.3s ease";
             resumeButton.style.backgroundColor = "#ff0";
             resumeButton.style.color = "#000";
+            resumeButton.style.transform = "scale(1.05)";
         });
-        resumeButton.addEventListener("mouseout", () => {
+        resumeButton.addEventListener("mouseleave", () => {
             resumeButton.style.backgroundColor = "#0ff";
             resumeButton.style.color = "#000";
+            resumeButton.style.transform = "scale(1)";
         });
+    }
+
+    // Preloader
+    const preloader = document.getElementById("splash");
+    if (preloader) {
+        setTimeout(() => {
+            preloader.style.opacity = "0";
+            preloader.style.transition = "opacity 0.5s ease-out";
+            setTimeout(() => preloader.style.display = "none", 500);
+        }, 2000);
     }
 });
