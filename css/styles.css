@@ -4,9 +4,11 @@
   padding: 0;
   box-sizing: border-box;
 }
+
 body {
   background-color: black !important;
   color: white !important;
+  font-family: Arial, sans-serif;
 }
 
 /* Página HOME fixa */
@@ -19,7 +21,6 @@ body {
   align-items: center;
   text-align: center;
   color: white;
-  font-family: Arial, sans-serif;
   position: relative;
 }
 
@@ -33,12 +34,18 @@ body {
   font-size: 20px;
 }
 
-/* Menu */
+/* Menu (fixo no topo) */
 nav {
-  position: absolute;
-  bottom: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0, 0, 0, 0.7); /* Fundo escuro transparente */
+  padding: 15px 0;
   display: flex;
-  gap: 15px;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
 }
 
 nav ul {
@@ -53,56 +60,11 @@ nav ul li {
   background: rgba(255, 255, 255, 0.2);
   border-radius: 5px;
   transition: 0.3s;
+  color: white; /* Texto branco */
+  font-weight: bold;
 }
 
 nav ul li:hover {
   background: rgba(255, 255, 255, 0.5);
-}
-
-/* Outras seções (escondidas por padrão) */
-.hidden {
-  display: none;
-}
-
-section {
-  padding: 50px;
-  text-align: center;
-  background: #fff;
-}
-
-section h2 {
-  font-size: 30px;
-  margin-bottom: 20px;
-}
-
-/* Formulário */
-form {
-  width: 50%;
-  margin: auto;
-}
-
-form input, form textarea {
-  width: 100%;
-  padding: 10px;
-  margin: 10px 0;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-.hidden {
-  display: none;
-}
-
-/* Botão do formulário */
-form button {
-  background: #007bff;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-form button:hover {
-  background: #0056b3;
 }
 
