@@ -4,13 +4,35 @@
   padding: 0;
   box-sizing: border-box;
 }
-#particles-js {
+@keyframes move-waves {
+  0% { background-position: 0 0; }
+  100% { background-position: 1000px 0; }
+}
+@keyframes twinkling {
+  0% { opacity: 0.2; }
+  50% { opacity: 1; }
+  100% { opacity: 0.2; }
+}
+
+.stars {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(white 1px, transparent 2px);
+  background-size: 50px 50px;
+  animation: twinkling 2s infinite ease-in-out alternate;
+}
+
+.animated-background {
   position: fixed;
   width: 100%;
   height: 100%;
   z-index: -1;
   background: linear-gradient(135deg, #1a1a2e, #16213e);
+  background-size: 200% 200%;
+  animation: move-waves 10s linear infinite;
 }
+
 button {
   background: transparent;
   border: 2px solid #00f5d4;
