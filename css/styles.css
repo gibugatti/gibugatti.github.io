@@ -52,7 +52,7 @@ nav ul li a {
 
 /* Página HOME */
 #home {
-  height: 90vh; /* Ajuste a altura conforme necessário para evitar o scroll */
+  height: 60vh; /* Ajuste a altura conforme necessário para evitar o scroll */
   background: url('https://source.unsplash.com/1600x900/?technology') no-repeat center top/cover;
   display: flex;
   flex-direction: column;
