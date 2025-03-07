@@ -9,7 +9,7 @@ body {
   background-color: black;
   color: white;
   font-family: Arial, sans-serif;
-  padding-top: 80px; /* Ajuste para garantir que o conteúdo não fique atrás do navbar fixo */
+  padding-top: 60px; /* Ajuste para garantir que o conteúdo não fique atrás do navbar fixo */
 }
 
 /* Cabeçalho */
@@ -60,7 +60,7 @@ nav ul li a {
   align-items: center;
   text-align: center;
   position: relative;
-  padding-top: 100px;
+  padding-top: 50px;
 }
 
 #home h1 {
