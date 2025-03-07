@@ -44,14 +44,17 @@ document.addEventListener("scroll", function () {
     canvas.height = window.innerHeight;
 
     const letters = "01"; // Apenas números binários
-    const fontSize = 30; // Aumentei o tamanho da fonte
+    const fontSize = 30; // Tamanho da fonte aumentado
     const columns = canvas.width / fontSize;
 
     const drops = Array(Math.floor(columns)).fill(0);
 
     function drawMatrix() {
-        // Limpa o canvas para evitar sobrecarga de desenhos
-        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        // Log para depuração
+        console.log("Desenhando...");
+        
+        // Removido o clearRect para depuração
+        // ctx.clearRect(0, 0, canvas.width, canvas.height);
 
         ctx.fillStyle = "#0F0"; // Verde Matrix
         ctx.font = `${fontSize}px monospace`;
