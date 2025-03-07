@@ -38,21 +38,25 @@ document.addEventListener("scroll", function () {
    const matrixElement = document.querySelector('.matrix');
     const letters = '01';  // Usando números binários
     const fontSize = 30;
-    const columns = Math.floor(window.innerWidth / fontSize);
+    const columns = Math.floor(window.innerWidth / fontSize); // Calculando a quantidade de colunas
+    const rows = Math.floor(window.innerHeight / fontSize);   // Calculando a quantidade de linhas
 
-    const drops = Array(columns).fill(0);  // Cada coluna terá um "drop" inicializado
-
-    // Função para criar a animação
+    // Função para criar o efeito de queda
     function createMatrixEffect() {
       matrixElement.innerHTML = '';  // Limpa o conteúdo da div a cada ciclo
+
       for (let i = 0; i < columns; i++) {
-        const char = letters[Math.floor(Math.random() * letters.length)]; // Gera números binários aleatórios
-        const span = document.createElement('span');
-        span.textContent = char;
-        span.style.left = `${i * fontSize}px`;  // Coloca cada número em uma posição diferente
-        span.style.animationDuration = `${Math.random() * 5 + 5}s`; // Tempo aleatório de animação
-        span.style.animationDelay = `${Math.random() * 5}s`; // Delay aleatório
-        matrixElement.appendChild(span);
+        // Para cada coluna, geramos vários números caindo
+        for (let j = 0; j < rows; j++) {
+          const char = letters[Math.floor(Math.random() * letters.length)]; // Gera números binários aleatórios
+          const span = document.createElement('span');
+          span.textContent = char;
+          span.style.left = `${i * fontSize}px`;  // Posiciona em cada coluna
+          span.style.top = `${j * fontSize}px`;  // Posiciona cada número verticalmente
+          span.style.animationDuration = `${Math.random() * 5 + 5}s`; // Tempo aleatório de animação
+          span.style.animationDelay = `${Math.random() * 5}s`; // Delay aleatório
+          matrixElement.appendChild(span);
+        }
       }
     }
 
