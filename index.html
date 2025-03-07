@@ -11,40 +11,44 @@
 <body>
 <canvas id="canvas" style="position: absolute; top: 0; left: 0;background: #111;" z-index: -1;"></canvas>
     <script>
-        var canvas = document.getElementById('canvas');
-        var context = canvas.getContext('2d');
-        var W = window.innerWidth;
-        var H = window.innerHeight;
+    var canvas = document.getElementById('canvas');
+    var context = canvas.getContext('2d');
+    var W = window.innerWidth;
+    var H = window.innerHeight;
 
-        canvas.width = W;
-        canvas.height = H;
+    canvas.width = W;
+    canvas.height = H;
 
-        var fontSize = 16;
-        var columns = Math.floor(W / fontSize);
-        var drops = [];
-        for(var i=0; i<columns; i++){
-            drops.push(0);
-        }
-        var str = "JavaScript Hacking Effect";
-        function draw(){
-            context.fillStyle = "rgba(0,0,0,0.05)";
-            context.fillRect(0, 0, W, H);
-            context.fontSize = "700 " + fontSize + "px";
-            context.fillStyle = "#00cc33";
-            for(var i=0; i<columns; i++){
-                var index = Math.floor(Math.random()*str.length);
-                var x = i * fontSize;
-                var y = drops[i] * fontSize;
-                context.fillText(str[index], x, y);
-                if(y >= canvas.height && Math.random() > 0.99){
-                    drops[i] = 0;
-                }
-                drops[i]++;
+    var fontSize = 16;
+    var columns = Math.floor(W / fontSize);
+    var drops = [];
+    for(var i = 0; i < columns; i++) {
+        drops.push(0);
+    }
+
+    var str = "01"; // Alterado para apenas 0 e 1
+
+    function draw() {
+        context.fillStyle = "rgba(0,0,0,0.05)";
+        context.fillRect(0, 0, W, H);
+        context.font = fontSize + "px Courier New"; // Definindo a fonte
+        context.fillStyle = "#00cc33";
+
+        for(var i = 0; i < columns; i++) {
+            var index = Math.floor(Math.random() * str.length); // Seleciona 0 ou 1
+            var x = i * fontSize;
+            var y = drops[i] * fontSize;
+            context.fillText(str[index], x, y); // Desenha o número binário
+            if(y >= canvas.height && Math.random() > 0.99) {
+                drops[i] = 0; // Reseta o valor do "drop" ao atingir o fundo
             }
+            drops[i]++;
         }
-        draw();
-        setInterval(draw, 35);
-    </script>
+    }
+
+    draw();
+    setInterval(draw, 35); // Atualiza a tela a cada 35ms
+</script>
 
 <nav>
   <ul>
