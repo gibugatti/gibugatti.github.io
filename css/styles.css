@@ -5,18 +5,46 @@
   box-sizing: border-box;
 }
 
-/* Fundo animado estilo Matrix */
-canvas {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  z-index: -10; /* Mantém os textos visíveis na frente */
-  background: black;
-  border: 2px solid red; /* Borda vermelha para depuração */
+ .matrix {
+      font-family: "Courier New", monospace;
+      font-size: 30px;
+      color: #0f0;
+      white-space: nowrap;
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      display: flex;
+      flex-wrap: wrap;
+    }
 
-}
+    .matrix span {
+      animation: drop 0.2s infinite;
+      position: absolute;
+    }
+
+    @keyframes drop {
+      0% {
+        opacity: 0;
+        transform: translateY(-100%);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(100%);
+      }
+    }
+
+    /* Animação para o efeito */
+    .matrix span:nth-child(odd) {
+      animation-duration: 0.5s;
+      animation-delay: calc(0.1s * var(--i));
+    }
+
+    .matrix span:nth-child(even) {
+      animation-duration: 0.7s;
+      animation-delay: calc(0.1s * var(--i));
+    }
 
 /* Ajustes Gerais */
 body {
