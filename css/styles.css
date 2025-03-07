@@ -5,7 +5,22 @@
   box-sizing: border-box;
 }
 
- .matrix {
+ * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body, html {
+      height: 100%;
+      background-color: black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .matrix {
       font-family: "Courier New", monospace;
       font-size: 30px;
       color: #0f0;
@@ -16,12 +31,22 @@
       height: 100%;
       width: 100%;
       display: flex;
-      flex-wrap: wrap;
+      flex-wrap: nowrap;
+      animation: moveLeft 10s linear infinite; /* Animação para a esteira infinita */
     }
 
     .matrix span {
-      animation: drop 0.2s infinite;
-      position: absolute;
+      display: inline-block;
+      animation: drop 0.5s infinite linear, fade 10s infinite linear; /* Combina animação de queda e movimento horizontal */
+    }
+
+    @keyframes moveLeft {
+      0% {
+        transform: translateX(100%);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
     }
 
     @keyframes drop {
@@ -35,15 +60,16 @@
       }
     }
 
-    /* Animação para o efeito */
-    .matrix span:nth-child(odd) {
-      animation-duration: 0.5s;
-      animation-delay: calc(0.1s * var(--i));
-    }
-
-    .matrix span:nth-child(even) {
-      animation-duration: 0.7s;
-      animation-delay: calc(0.1s * var(--i));
+    @keyframes fade {
+      0% {
+        opacity: 0;
+      }
+      50% {
+        opacity: 1;
+      }
+      100% {
+        opacity: 0;
+      }
     }
 
 /* Ajustes Gerais */
