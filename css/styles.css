@@ -35,14 +35,16 @@ body {
 h1 {
     font-size: 3rem;
     text-transform: uppercase;
-    color: #00ff00;
+    color: white;
     text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00;
     animation: textAnimation 2s ease-in-out infinite alternate;
 }
 
 p {
     font-size: 1.2rem;
-    animation: textAnimation 2s ease-in-out 1s infinite alternate;
+    animation: textAnimation 2s ease-in-out 1s infinite alternate;\
+        color: white;
+
 }
 
 /* Animação suave do texto */
