@@ -57,93 +57,59 @@ p {
 /* Estilo para os números binários caindo em esteira */
 @keyframes binaryFall {
     0% {
-        transform: translateX(100%);
+        transform: translateY(-100%);
         opacity: 0;
     }
     100% {
-        transform: translateX(-100%);
+        transform: translateY(100vh);
         opacity: 1;
     }
 }
 
-/* Configuração dos números binários */
-.binary {
+/* Estilo dos números binários */
+.matrix {
     position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.matrix span {
+    position: absolute;
+    color: #00ff00;
     font-size: 20px;
-    color: rgba(0, 255, 0, 0.8);
     white-space: nowrap;
-    animation: binaryFall 5s linear infinite;
-    opacity: 0;
+    animation: binaryFall linear infinite;
+    opacity: 0.5;
     user-select: none;
 }
 
-/* Gerando diferentes posições horizontais para os números binários */
-.binary:nth-child(1) {
-    top: 10%;
-    left: 5%;
+/* Gerando números binários de forma aleatória */
+.matrix span:nth-child(odd) {
     animation-duration: 7s;
     animation-delay: 0s;
 }
 
-.binary:nth-child(2) {
-    top: 15%;
-    left: 10%;
-    animation-duration: 6.5s;
-    animation-delay: 1s;
-}
-
-.binary:nth-child(3) {
-    top: 20%;
-    left: 15%;
+.matrix span:nth-child(even) {
     animation-duration: 8s;
     animation-delay: 2s;
 }
 
-.binary:nth-child(4) {
-    top: 25%;
-    left: 20%;
-    animation-duration: 7.5s;
-    animation-delay: 3s;
-}
-
-.binary:nth-child(5) {
-    top: 30%;
-    left: 25%;
-    animation-duration: 6s;
-    animation-delay: 4s;
-}
-
-.binary:nth-child(6) {
-    top: 35%;
-    left: 30%;
-    animation-duration: 6.8s;
-    animation-delay: 5s;
-}
-
-.binary:nth-child(7) {
-    top: 40%;
-    left: 35%;
-    animation-duration: 5.5s;
-    animation-delay: 6s;
-}
-
-.binary:nth-child(8) {
-    top: 45%;
-    left: 40%;
-    animation-duration: 7.2s;
-    animation-delay: 7s;
-}
-
-/* Gerando mais números aleatórios por toda a página */
-@for $i from 1 through 100 {
-    .binary:nth-child(#{$i}) {
-        top: random(100)%;
-        left: random(100)%;
-        animation-duration: random(5s) + 5s;
-        animation-delay: random(4s);
-        opacity: random(0.6) + 0.4;
+/* Gerar números binários por toda a página */
+@keyframes binaryFall {
+    0% {
+        transform: translateY(-100%);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh);
+        opacity: 0;
     }
 }
+
 /* Ajustes Gerais */
 body {
   background-color: black;
