@@ -29,19 +29,19 @@ p {
     }
 }
 
-/* Criar chuva de números binários */
+/* Estilo para os números binários caindo em esteira */
 @keyframes binaryFall {
     0% {
-        transform: translateY(-100%);
+        transform: translateX(100%);
         opacity: 0;
     }
     100% {
-        transform: translateY(100vh);
+        transform: translateX(-100%);
         opacity: 1;
     }
 }
 
-/* Configurações para os números binários */
+/* Configuração dos números binários */
 .binary {
     position: absolute;
     font-size: 20px;
@@ -52,61 +52,70 @@ p {
     user-select: none;
 }
 
-/* Criando diferentes posições e animações */
+/* Gerando diferentes posições horizontais para os números binários */
 .binary:nth-child(1) {
-    left: 10%;
-    animation-duration: 4s;
-    animation-delay: 0.2s;
+    top: 10%;
+    left: 5%;
+    animation-duration: 7s;
+    animation-delay: 0s;
 }
 
 .binary:nth-child(2) {
-    left: 20%;
-    animation-duration: 5s;
-    animation-delay: 0.5s;
+    top: 15%;
+    left: 10%;
+    animation-duration: 6.5s;
+    animation-delay: 1s;
 }
 
 .binary:nth-child(3) {
-    left: 30%;
-    animation-duration: 6s;
-    animation-delay: 0.8s;
+    top: 20%;
+    left: 15%;
+    animation-duration: 8s;
+    animation-delay: 2s;
 }
 
 .binary:nth-child(4) {
-    left: 40%;
-    animation-duration: 7s;
-    animation-delay: 1.2s;
+    top: 25%;
+    left: 20%;
+    animation-duration: 7.5s;
+    animation-delay: 3s;
 }
 
 .binary:nth-child(5) {
-    left: 50%;
-    animation-duration: 4.5s;
-    animation-delay: 1.4s;
+    top: 30%;
+    left: 25%;
+    animation-duration: 6s;
+    animation-delay: 4s;
 }
 
 .binary:nth-child(6) {
-    left: 60%;
-    animation-duration: 5.5s;
-    animation-delay: 1.8s;
+    top: 35%;
+    left: 30%;
+    animation-duration: 6.8s;
+    animation-delay: 5s;
 }
 
 .binary:nth-child(7) {
-    left: 70%;
-    animation-duration: 6.5s;
-    animation-delay: 2.0s;
+    top: 40%;
+    left: 35%;
+    animation-duration: 5.5s;
+    animation-delay: 6s;
 }
 
 .binary:nth-child(8) {
-    left: 80%;
-    animation-duration: 5.0s;
-    animation-delay: 0.9s;
+    top: 45%;
+    left: 40%;
+    animation-duration: 7.2s;
+    animation-delay: 7s;
 }
 
-/* Gerar números binários em quantidade */
+/* Gerando mais números aleatórios por toda a página */
 @for $i from 1 through 100 {
     .binary:nth-child(#{$i}) {
         top: random(100)%;
+        left: random(100)%;
         animation-duration: random(5s) + 5s;
-        animation-delay: random(3s);
+        animation-delay: random(4s);
         opacity: random(0.6) + 0.4;
     }
 }
