@@ -1,0 +1,91 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+/* Estilo do corpo */
+body {
+  background-color: #121212;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 20px;
+}
+
+/* Cabeçalho */
+header {
+  width: 100%;
+  text-align: left;
+  padding: 20px;
+}
+
+.back-button {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.back-button:hover {
+  color: #00aaff;
+}
+
+/* Seção Sobre */
+#about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  max-width: 800px;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.about-text {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.about-text h2 {
+  font-size: 28px;
+  color: #00aaff;
+}
+
+.about-text p {
+  font-size: 18px;
+  margin-top: 10px;
+  line-height: 1.5;
+}
+
+/* Imagem */
+.about-image img {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  border: 3px solid #00aaff;
+}
+
+/* Responsividade */
+@media (min-width: 768px) {
+  .about-content {
+    flex-direction: row;
+    text-align: left;
+  }
+
+  .about-text {
+    max-width: 500px;
+  }
+}
