@@ -14,7 +14,7 @@ body {
 /* Cabeçalho */
 header {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   padding: 20px;
   background: rgba(255, 255, 255, 0.1);
@@ -23,57 +23,6 @@ header {
   top: 0;
   left: 0;
   z-index: 1000;
-}
-
-.social-icons a {
-  color: white;
-  font-size: 24px;
-  margin: 0 10px;
-  transition: 0.3s;
-}
-
-.social-icons a:hover {
-  color: #007bff;
-}
-
-.btn-cv {
-  background: #007bff;
-  color: white;
-  padding: 10px 15px;
-  border-radius: 5px;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.btn-cv:hover {
-  background: #0056b3;
-}
-
-/* Página HOME */
-#home {
-  height: 100vh;
-  background: url('https://source.unsplash.com/1600x900/?technology') no-repeat center center/cover;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  position: relative;
-  padding-top: 80px;
-}
-
-#home h1 {
-  font-size: 50px;
-  margin-bottom: 10px;
-}
-
-#home p {
-  font-size: 20px;
-}
-
-/* Menu */
-nav {
-  margin-top: 20px;
 }
 
 nav ul {
@@ -97,4 +46,59 @@ nav ul li a {
   text-decoration: none;
   color: white;
   font-weight: bold;
+}
+
+/* Página HOME */
+#home {
+  height: 100vh;
+  background: url('https://source.unsplash.com/1600x900/?technology') no-repeat center center/cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+  padding-top: 80px;
+}
+
+#home h1 {
+  font-size: 50px;
+  margin-bottom: 10px;
+}
+
+#home p {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+/* Botão CV */
+.btn-cv {
+  background: #007bff;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.btn-cv:hover {
+  background: #0056b3;
+}
+
+/* Ícones Sociais */
+.social-icons {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.social-icons a {
+  color: white;
+  font-size: 24px;
+  transition: 0.3s;
+}
+
+.social-icons a:hover {
+  color: #007bff;
 }
