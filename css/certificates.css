@@ -1,0 +1,87 @@
+/* Resetando margens e padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Estilo do corpo */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    padding: 20px;
+}
+
+/* Container principal */
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Título */
+h1 {
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 30px;
+    color: #4CAF50;
+}
+
+/* Estilo da timeline */
+.timeline {
+    position: relative;
+    padding-left: 30px;
+}
+
+.timeline:before {
+    content: '';
+    position: absolute;
+    left: 10px;
+    top: 0;
+    bottom: 0;
+    width: 2px;
+    background-color: #4CAF50;
+}
+
+/* Estilo de cada item da timeline */
+.timeline-item {
+    margin-bottom: 20px;
+    position: relative;
+}
+
+.timeline-date {
+    position: absolute;
+    left: -60px;
+    top: 0;
+    width: 50px;
+    text-align: center;
+    font-weight: bold;
+    color: #fff;
+    background-color: #4CAF50;
+    border-radius: 50%;
+    line-height: 30px;
+    font-size: 1.2em;
+}
+
+.timeline-content {
+    margin-left: 80px;
+    background-color: #fff;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.timeline-content h3 {
+    font-size: 1.5em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+.timeline-content p {
+    font-size: 1em;
+    color: #555;
+}
