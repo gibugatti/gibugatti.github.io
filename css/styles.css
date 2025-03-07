@@ -4,7 +4,40 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: #333;
+      z-index: 1000;
+    }
+    nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      justify-content: center;
+    }
+    nav ul li {
+      padding: 14px 20px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  transition: 0.3s;
+    }
+    nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-size: 18px;
+  font-weight: bold;
+    }
+    /* Espaço para o conteúdo abaixo do navbar */
+    .content {
+      margin-top: 60px; /* Ajuste conforme o tamanho do navbar */
+    }
+    /* Estilo para os ícones do FontAwesome */
+    .fa {
+      margin-right: 8px;
+    }
 body {
   background-color: black;
   color: white;
@@ -25,33 +58,8 @@ header {
   z-index: 1000;
 }
 
-nav {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  gap: 20px;
-}
-
-nav ul li {
-  padding: 10px 15px;
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 5px;
-  transition: 0.3s;
-}
-
 nav ul li:hover {
   background: rgba(255, 255, 255, 0.5);
-}
-
-nav ul li a {
-  text-decoration: none;
-  color: white;
-  font-weight: bold;
 }
 
 /* Página HOME */
