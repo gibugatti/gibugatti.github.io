@@ -4,36 +4,85 @@
   padding: 0;
   box-sizing: border-box;
 }
-@keyframes move-waves {
-  0% { background-position: 0 0; }
-  100% { background-position: 1000px 0; }
-}
-@keyframes twinkling {
-  0% { opacity: 0.2; }
+@keyframes rain {
+  0% { transform: translateY(-100%); opacity: 0; }
   50% { opacity: 1; }
-  100% { opacity: 0.2; }
-}
-@keyframes fog {
-  0% { transform: translateX(-10%); }
-  100% { transform: translateX(10%); }
+  100% { transform: translateY(100%); opacity: 0; }
 }
 
-.fog {
+.matrix {
   position: fixed;
   width: 100%;
   height: 100%;
-  background: radial-gradient(circle, rgba(255,255,255,0.1) 10%, transparent 90%);
-  animation: fog 6s ease-in-out infinite alternate;
+  background: black;
+  overflow: hidden;
 }
 
-.stars {
+.matrix::before {
+  content: "010101110010101011011101010";
+  position: absolute;
+  top: -10%;
+  left: 50%;
+  transform: translateX(-50%);
+  color: #00ff00;
+  font-size: 24px;
+  font-family: monospace;
+  white-space: nowrap;
+  opacity: 0.2;
+  animation: rain 3s linear infinite;
+}
+
+@keyframes neon {
+  0%, 100% { opacity: 0.2; transform: scale(1); }
+  50% { opacity: 1; transform: scale(1.2); }
+}
+
+.neon-lines {
   position: fixed;
   width: 100%;
   height: 100%;
-  background: radial-gradient(white 1px, transparent 2px);
-  background-size: 50px 50px;
-  animation: twinkling 2s infinite ease-in-out alternate;
+  background: black;
+  overflow: hidden;
 }
+
+.neon-lines::before,
+.neon-lines::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    90deg, 
+    rgba(0, 255, 255, 0.2) 0px, 
+    rgba(0, 255, 255, 0.8) 2px, 
+    transparent 4px
+  );
+  animation: neon 3s linear infinite alternate;
+}
+
+@keyframes circuit {
+  0%, 100% { opacity: 0.3; }
+  50% { opacity: 1; }
+}
+
+.circuit {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: black;
+}
+
+.circuit::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: url('https://www.transparenttextures.com/patterns/circuit-board.png');
+  opacity: 0.5;
+  filter: invert(1);
+  animation: circuit 2s infinite ease-in-out alternate;
+}
+
 
 .animated-background {
   position: fixed;
