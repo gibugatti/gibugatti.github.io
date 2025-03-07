@@ -26,15 +26,20 @@ header {
 }
 
 .back-button {
-  color: #ffffff;
+  color: #ffffff; /* Mantém o texto do botão branco */
   text-decoration: none;
   font-size: 18px;
   font-weight: bold;
   transition: 0.3s;
+  background: rgba(255, 255, 255, 0.1);
+  padding: 10px 15px;
+  border-radius: 8px;
+  display: inline-block;
 }
 
 .back-button:hover {
-  color: #00aaff;
+  background: #00aaff;
+  color: #ffffff; /* Garante que o texto continue branco */
 }
 
 /* Seção Sobre */
