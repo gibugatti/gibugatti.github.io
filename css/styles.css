@@ -9,10 +9,11 @@ body {
   background-color: black;
   color: white;
   font-family: Arial, sans-serif;
+  padding-top: 80px; /* Ajuste para garantir que o conteúdo não fique atrás do navbar fixo */
 }
 
 /* Cabeçalho */
-header {
+nav {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -23,12 +24,7 @@ header {
   top: 0;
   left: 0;
   z-index: 1000;
-}
-
-nav {
-  display: flex;
-  justify-content: center;
-  width: 100%;
+  transition: background 0.3s;
 }
 
 nav ul {
@@ -41,7 +37,7 @@ nav ul li {
   padding: 10px 15px;
   background: rgba(255, 255, 255, 0.2);
   border-radius: 5px;
-  transition: 0.3s;
+  transition: background 0.3s;
 }
 
 nav ul li:hover {
@@ -64,7 +60,6 @@ nav ul li a {
   align-items: center;
   text-align: center;
   position: relative;
-  padding-top: 100px;
 }
 
 #home h1 {
@@ -78,6 +73,11 @@ nav ul li a {
 }
 
 /* Botão CV */
+.cv {
+  margin-top: 20px; /* Adiciona espaço acima do CV */
+  text-align: center; /* Centraliza o botão do CV */
+}
+
 .btn-cv {
   background: #007bff;
   color: white;
@@ -103,7 +103,7 @@ nav ul li a {
 .social-icons a {
   color: white;
   font-size: 30px;
-  transition: 0.3s;
+  transition: color 0.3s;
 }
 
 .social-icons a:hover {
