@@ -4,41 +4,42 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Giulia Bugatti - Portfolio</title>
-  <link rel="stylesheet" href="css/styles.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script defer src="script.js"></script>
 </head>
 <body>
-  <header>
+
+  <!-- Seção HOME (fixa) -->
+  <section id="home">
+    <div class="content">
+      <h1>Giulia Bugatti</h1>
+      <p>Desenvolvedora | Cientista de Dados | Especialista em IA</p>
+    </div>
     <nav>
       <ul>
-        <li><a href="#home">Home</a></li>
-        <li><a href="#about">Sobre</a></li>
-        <li><a href="#portfolio">Portfólio</a></li>
-        <li><a href="#skills">Habilidades</a></li>
-        <li><a href="#languages">Idiomas</a></li>
-        <li><a href="#education">Formação</a></li>
-        <li><a href="#certificates">Certificados</a></li>
-        <li><a href="#contact">Contato</a></li>
+        <li onclick="toggleSection('about')">Sobre</li>
+        <li onclick="toggleSection('portfolio')">Portfólio</li>
+        <li onclick="toggleSection('skills')">Habilidades</li>
+        <li onclick="toggleSection('languages')">Idiomas</li>
+        <li onclick="toggleSection('education')">Formação</li>
+        <li onclick="toggleSection('certificates')">Certificados</li>
+        <li onclick="toggleSection('contact')">Contato</li>
       </ul>
     </nav>
-  </header>
-
-  <section id="home">
-    <h1>Bem-vindo ao meu portfólio</h1>
-    <p>Explorando IA, Ciência de Dados e Desenvolvimento de Software.</p>
-    <a href="assets/CV_Giulia.pdf" download class="btn">Baixar CV</a>
   </section>
 
-  <section id="about">
+  <!-- Outras seções (inicialmente escondidas) -->
+  <section id="about" class="hidden">
     <h2>Sobre Mim</h2>
     <p>Estudante de IA na 42 | FIAP, apaixonada por tecnologia.</p>
   </section>
 
-  <section id="portfolio">
+  <section id="portfolio" class="hidden">
     <h2>Portfólio</h2>
     <p>Projetos em Machine Learning, Data Science e Desenvolvimento Web.</p>
   </section>
 
-  <section id="skills">
+  <section id="skills" class="hidden">
     <h2>Habilidades</h2>
     <ul>
       <li>Python</li>
@@ -48,17 +49,17 @@
     </ul>
   </section>
 
-  <section id="languages">
+  <section id="languages" class="hidden">
     <h2>Idiomas</h2>
     <p>Português (Nativo), Inglês (Avançado)</p>
   </section>
 
-  <section id="education">
+  <section id="education" class="hidden">
     <h2>Formação Acadêmica</h2>
     <p>42 | FIAP - Inteligência Artificial</p>
   </section>
 
-  <section id="certificates">
+  <section id="certificates" class="hidden">
     <h2>Certificados</h2>
     <ul>
       <li>Machine Learning - Coursera</li>
@@ -66,7 +67,7 @@
     </ul>
   </section>
 
-  <section id="contact">
+  <section id="contact" class="hidden">
     <h2>Contato</h2>
     <form>
       <input type="text" placeholder="Nome" required>
@@ -76,12 +77,5 @@
     </form>
   </section>
 
-  <footer>
-    <p>&copy; 2025 Giulia Bugatti</p>
-  </footer>
-
-  <script src="script.js"></script>
 </body>
 </html>
-
-
