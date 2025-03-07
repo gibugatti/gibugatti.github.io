@@ -66,7 +66,74 @@ p {
     }
 }
 
-/* Estilo dos números binários */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    overflow: hidden;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+body {
+    background-color: black;
+    color: #00ff00;
+    position: relative;
+    font-size: 20px;
+    overflow: hidden;
+}
+
+/* Título e texto centralizado */
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 2;
+    color: #00ff00;
+}
+
+h1 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: #00ff00;
+    text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00;
+}
+
+p {
+    font-size: 1.2rem;
+    animation: textAnimation 2s ease-in-out 1s infinite alternate;
+}
+
+/* Animação suave do texto */
+@keyframes textAnimation {
+    0% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
+}
+
+/* Estilo para os números binários caindo em esteira */
+@keyframes binaryFall {
+    0% {
+        transform: translateY(-100%);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh);
+        opacity: 0;
+    }
+}
+
+/* Estilo para a área onde os números binários caem */
 .matrix {
     position: absolute;
     top: 0;
@@ -83,11 +150,11 @@ p {
     font-size: 20px;
     white-space: nowrap;
     animation: binaryFall linear infinite;
-    opacity: 0.5;
+    opacity: 0.7;
     user-select: none;
 }
 
-/* Gerando números binários de forma aleatória */
+/* Gerar números binários ao longo da página */
 .matrix span:nth-child(odd) {
     animation-duration: 7s;
     animation-delay: 0s;
@@ -95,10 +162,15 @@ p {
 
 .matrix span:nth-child(even) {
     animation-duration: 8s;
-    animation-delay: 2s;
+    animation-delay: 1s;
 }
 
-/* Gerar números binários por toda a página */
+/* Ajustar a posição dos números de forma aleatória para cobrir a tela toda */
+.matrix span {
+    animation: binaryFall linear infinite;
+    opacity: 0.7;
+}
+
 @keyframes binaryFall {
     0% {
         transform: translateY(-100%);
@@ -110,6 +182,17 @@ p {
     }
 }
 
+/* Ajustar o número de colunas e a largura dos números */
+@keyframes binaryFall {
+    0% {
+        transform: translateY(-100%);
+        opacity: 1;
+    }
+    100% {
+        transform: translateY(100vh);
+        opacity: 0;
+    }
+}
 /* Ajustes Gerais */
 body {
   background-color: black;
