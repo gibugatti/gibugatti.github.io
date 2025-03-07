@@ -11,3 +11,22 @@ function toggleSection(sectionId) {
   // Exibe a seção clicada
   document.getElementById(sectionId).classList.remove("hidden");
 }
+let currentPage = 0;
+
+function changePage(pageIndex) {
+  const carousel = document.querySelector('.carousel-items');
+  const navDots = document.querySelectorAll('.nav-dot');
+
+  // Atualiza a página visível
+  carousel.style.transform = `translateX(-${pageIndex * 100}%)`;
+
+  // Marca o ponto ativo
+  navDots.forEach((dot, index) => {
+    dot.classList.remove('active');
+    if (index === pageIndex) {
+      dot.classList.add('active');
+    }
+  });
+
+  currentPage = pageIndex;
+}
