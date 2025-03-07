@@ -35,30 +35,24 @@ document.addEventListener("scroll", function () {
   let scrollTop = window.scrollY;
   document.querySelector(".title").style.transform = `translateY(${scrollTop * 0.5}px)`;
 });
-   const matrixElement = document.querySelector('.matrix');
-    const letters = '01';  // Usando números binários
-    const fontSize = 30;
-    const columns = Math.floor(window.innerWidth / fontSize); // Calculando a quantidade de colunas
-    const rows = Math.floor(window.innerHeight / fontSize);   // Calculando a quantidade de linhas
+   (createMatrixEffect, 300);
+document.addEventListener("DOMContentLoaded", () => {
+  const matrix = document.getElementById("matrix");
+  const matrixWidth = matrix.offsetWidth;
+  const matrixHeight = matrix.offsetHeight;
 
-    // Função para criar o efeito de queda
-    function createMatrixEffect() {
-      matrixElement.innerHTML = '';  // Limpa o conteúdo da div a cada ciclo
+  function createMatrixNumber() {
+    const number = document.createElement("div");
+    number.classList.add("matrix-number");
+    number.textContent = Math.random() > 0.5 ? "0" : "1";
+    number.style.left = `${Math.random() * matrixWidth}px`;
+    number.style.animationDuration = `${Math.random() * 3 + 2}s`;
+    matrix.appendChild(number);
 
-      for (let i = 0; i < columns; i++) {
-        // Para cada coluna, geramos vários números caindo
-        for (let j = 0; j < rows; j++) {
-          const char = letters[Math.floor(Math.random() * letters.length)]; // Gera números binários aleatórios
-          const span = document.createElement('span');
-          span.textContent = char;
-          span.style.left = `${i * fontSize}px`;  // Posiciona em cada coluna
-          span.style.top = `${j * fontSize}px`;  // Posiciona cada número verticalmente
-          span.style.animationDuration = `${Math.random() * 5 + 5}s`; // Tempo aleatório de animação
-          span.style.animationDelay = `${Math.random() * 5}s`; // Delay aleatório
-          matrixElement.appendChild(span);
-        }
-      }
-    }
+    number.addEventListener("animationend", () => {
+      number.remove();
+    });
+  }
 
-    // Chama a função para criar o efeito continuamente
-    setInterval(createMatrixEffect, 300);
+  setInterval(createMatrixNumber, 100);
+});
