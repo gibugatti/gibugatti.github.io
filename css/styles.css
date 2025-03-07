@@ -6,25 +6,50 @@
 }
 
 body {
-  background-color: black !important;
-  color: white !important;
+  background-color: black;
+  color: white;
   font-family: Arial, sans-serif;
 }
-/* Exemplo de regra de estilo para os links do menu de navegação */
-nav ul li a {
-    color: white; /* Define a cor do texto para branco */
-    text-decoration: none; /* Remove o sublinhado dos links */
+
+/* Cabeçalho */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
 }
 
-/* Opcional: regras para os estados hover e active */
-nav ul li a:hover {
-    color: lightgray; /* Define a cor do texto para um cinza claro quando o link é passado o mouse por cima */
+.social-icons a {
+  color: white;
+  font-size: 24px;
+  margin: 0 10px;
+  transition: 0.3s;
 }
 
-nav ul li a:active {
-    color: gray; /* Define a cor do texto para cinza quando o link é clicado */
+.social-icons a:hover {
+  color: #007bff;
 }
-/* Página HOME fixa */
+
+.btn-cv {
+  background: #007bff;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.btn-cv:hover {
+  background: #0056b3;
+}
+
+/* Página HOME */
 #home {
   height: 100vh;
   background: url('https://source.unsplash.com/1600x900/?technology') no-repeat center center/cover;
@@ -33,11 +58,10 @@ nav ul li a:active {
   justify-content: center;
   align-items: center;
   text-align: center;
-  color: white;
   position: relative;
+  padding-top: 80px;
 }
 
-/* Nome e Cargo */
 #home h1 {
   font-size: 50px;
   margin-bottom: 10px;
@@ -47,18 +71,9 @@ nav ul li a:active {
   font-size: 20px;
 }
 
-/* Menu (fixo no topo) */
+/* Menu */
 nav {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  background: rgba(0, 0, 0, 0.7); /* Fundo escuro transparente */
-  padding: 15px 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 1000;
+  margin-top: 20px;
 }
 
 nav ul {
@@ -68,16 +83,18 @@ nav ul {
 }
 
 nav ul li {
-  cursor: pointer;
   padding: 10px 15px;
   background: rgba(255, 255, 255, 0.2);
   border-radius: 5px;
   transition: 0.3s;
-  color: white; /* Texto branco */
-  font-weight: bold;
 }
 
 nav ul li:hover {
   background: rgba(255, 255, 255, 0.5);
 }
 
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
