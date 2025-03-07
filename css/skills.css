@@ -45,7 +45,7 @@ header {
 /* Seções */
 .container {
   width: 100%;
-  max-width: 600px;
+  max-width: 800px;
   text-align: center;
   margin: 20px auto;
 }
@@ -56,7 +56,25 @@ h2 {
   margin-bottom: 20px;
 }
 
-/* Barras de Progresso */
+/* Carrossel de Habilidades */
+.carousel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+}
+
+.carousel-items {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.skill-page {
+  min-width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .skill {
   margin-bottom: 20px;
 }
@@ -100,17 +118,13 @@ h2 {
   background-color: #00aaff;
   margin: 0 5px;
   transition: background-color 0.3s;
+  cursor: pointer;
 }
 
 .nav-dot:hover {
   background-color: #ffffff;
 }
 
-/* Estilo de página de habilidades */
-.skill-page {
-  display: none;
-}
-
-#page2, #page3, #page4, #page5, #page6 {
-  display: block;
+.nav-dot.active {
+  background-color: #ffffff;
 }
