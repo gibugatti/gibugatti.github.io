@@ -13,6 +13,18 @@
   50% { opacity: 1; }
   100% { opacity: 0.2; }
 }
+@keyframes fog {
+  0% { transform: translateX(-10%); }
+  100% { transform: translateX(10%); }
+}
+
+.fog {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle, rgba(255,255,255,0.1) 10%, transparent 90%);
+  animation: fog 6s ease-in-out infinite alternate;
+}
 
 .stars {
   position: fixed;
