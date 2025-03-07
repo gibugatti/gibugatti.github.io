@@ -4,44 +4,39 @@
   padding: 0;
   box-sizing: border-box;
 }
+#matrix {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background: black;
+  z-index: -1; /* Coloca a animação atrás do conteúdo */
+}
 
-    .matrix {
-      position: absolute;
-      top: 0;
-      left: 0;
-      width: 100%;
-      height: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
-      z-index: -1;
-    }
+.matrix-number {
+  position: absolute;
+  top: -50px;
+  color: green;
+  font-size: 20px;
+  font-family: monospace;
+  animation: fall 5s linear infinite;
+}
 
-    .matrix span {
-      position: absolute;
-      color: #0f0; /* Verde típico do efeito Matrix */
-      font-family: 'Courier New', monospace;
-      font-size: 30px;
-      white-space: nowrap;
-      opacity: 0;
-      animation: drop 5s infinite linear;
-    }
-
-    @keyframes drop {
-      0% {
-        transform: translateY(-100%);
-        opacity: 1;
-      }
-      50% {
-        opacity: 1;
-      }
-      100% {
-        transform: translateY(100%);
-        opacity: 0;
-      }
-    }
-
+@keyframes fall {
+  0% {
+    top: -50px;
+    opacity: 0;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    top: 100%;
+    opacity: 0;
+  }
+}
 /* Ajustes Gerais */
 body {
   background-color: black;
