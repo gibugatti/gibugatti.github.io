@@ -44,7 +44,7 @@ document.addEventListener("scroll", function () {
     canvas.height = window.innerHeight;
 
     const letters = "01"; // Apenas números binários
-    const fontSize = 16;
+    const fontSize = 30; // Aumentei o tamanho da fonte
     const columns = canvas.width / fontSize;
 
     const drops = Array(Math.floor(columns)).fill(0);
