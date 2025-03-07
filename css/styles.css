@@ -4,39 +4,107 @@
   padding: 0;
   box-sizing: border-box;
 }
-#matrix {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  background: black;
-  z-index: -1; /* Coloca a animação atrás do conteúdo */
+/* Efeito de animação no texto */
+@keyframes textAnimation {
+    0% {
+        transform: scale(1);
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(1.1);
+        opacity: 1;
+    }
 }
 
-.matrix-number {
-  position: absolute;
-  top: -50px;
-  color: green;
-  font-size: 20px;
-  font-family: monospace;
-  animation: fall 5s linear infinite;
+/* Números binários caindo */
+@keyframes binaryFall {
+    0% {
+        transform: translateY(-100%);
+    }
+    100% {
+        transform: translateY(100vh);
+    }
 }
 
-@keyframes fall {
-  0% {
-    top: -50px;
+.binary {
+    position: absolute;
+    font-size: 30px;
+    color: rgba(0, 255, 0, 0.6);
+    white-space: nowrap;
+    animation: binaryFall 5s linear infinite;
     opacity: 0;
-  }
-  10% {
-    opacity: 1;
-  }
-  100% {
-    top: 100%;
-    opacity: 0;
-  }
 }
+
+.binary:nth-child(1) {
+    left: 5%;
+    animation-duration: 4s;
+}
+
+.binary:nth-child(2) {
+    left: 15%;
+    animation-duration: 5s;
+    animation-delay: 1s;
+}
+
+.binary:nth-child(3) {
+    left: 25%;
+    animation-duration: 6s;
+    animation-delay: 2s;
+}
+
+.binary:nth-child(4) {
+    left: 35%;
+    animation-duration: 4s;
+    animation-delay: 1s;
+}
+
+.binary:nth-child(5) {
+    left: 45%;
+    animation-duration: 7s;
+    animation-delay: 3s;
+}
+
+.binary:nth-child(6) {
+    left: 55%;
+    animation-duration: 5s;
+    animation-delay: 0.5s;
+}
+
+.binary:nth-child(7) {
+    left: 65%;
+    animation-duration: 6s;
+    animation-delay: 2.5s;
+}
+
+.binary:nth-child(8) {
+    left: 75%;
+    animation-duration: 7s;
+    animation-delay: 4s;
+}
+
+.binary:nth-child(9) {
+    left: 85%;
+    animation-duration: 4s;
+    animation-delay: 1.5s;
+}
+
+/* Gerando os números binários */
+body::before {
+    content: "0";
+    position: absolute;
+    top: 0;
+    left: 5%;
+    animation: binaryFall 5s linear infinite;
+}
+
+body::after {
+    content: "1";
+    position: absolute;
+    top: 0;
+    left: 15%;
+    animation: binaryFall 5s linear infinite;
+}
+
 /* Ajustes Gerais */
 body {
   background-color: black;
