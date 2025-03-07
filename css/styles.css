@@ -9,7 +9,6 @@ body {
   background-color: black;
   color: white;
   font-family: Arial, sans-serif;
-  padding-top: 80px; /* Ajuste para garantir que o conteúdo não fique atrás do navbar fixo */
 }
 
 /* Cabeçalho */
@@ -65,6 +64,7 @@ nav ul li a {
   align-items: center;
   text-align: center;
   position: relative;
+  padding-top: 100px;
 }
 
 #home h1 {
@@ -78,11 +78,6 @@ nav ul li a {
 }
 
 /* Botão CV */
-.cv {
-  margin-top: 20px; /* Adiciona espaço acima do CV */
-  text-align: center; /* Centraliza o botão do CV */
-}
-
 .btn-cv {
   background: #007bff;
   color: white;
