@@ -4,6 +4,10 @@
   padding: 0;
   box-sizing: border-box;
 }
+body {
+  background-color: black !important;
+  color: white !important;
+}
 
 /* Página HOME fixa */
 #home {
