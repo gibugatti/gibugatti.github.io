@@ -35,27 +35,28 @@ document.addEventListener("scroll", function () {
   let scrollTop = window.scrollY;
   document.querySelector(".title").style.transform = `translateY(${scrollTop * 0.5}px)`;
 });
- const canvas = document.createElement("canvas");
+   // Cria o canvas e configura o contexto 2D
+    const canvas = document.createElement("canvas");
     const ctx = canvas.getContext("2d");
 
+    // Adiciona o canvas ao body
     document.body.appendChild(canvas);
 
+    // Define o tamanho do canvas
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
 
     const letters = "01"; // Apenas números binários
-    const fontSize = 30; // Tamanho da fonte aumentado
+    const fontSize = 30; // Tamanho da fonte
     const columns = canvas.width / fontSize;
 
     const drops = Array(Math.floor(columns)).fill(0);
 
     function drawMatrix() {
-        // Log para depuração
-        console.log("Desenhando...");
-        
-        // Removido o clearRect para depuração
-        // ctx.clearRect(0, 0, canvas.width, canvas.height);
+        // Limpa o canvas a cada frame
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
 
+        // Define a cor do texto para verde (estilo Matrix)
         ctx.fillStyle = "#0F0"; // Verde Matrix
         ctx.font = `${fontSize}px monospace`;
 
