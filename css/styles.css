@@ -10,7 +10,20 @@ body {
   color: white !important;
   font-family: Arial, sans-serif;
 }
+/* Exemplo de regra de estilo para os links do menu de navegação */
+nav ul li a {
+    color: white; /* Define a cor do texto para branco */
+    text-decoration: none; /* Remove o sublinhado dos links */
+}
 
+/* Opcional: regras para os estados hover e active */
+nav ul li a:hover {
+    color: lightgray; /* Define a cor do texto para um cinza claro quando o link é passado o mouse por cima */
+}
+
+nav ul li a:active {
+    color: gray; /* Define a cor do texto para cinza quando o link é clicado */
+}
 /* Página HOME fixa */
 #home {
   height: 100vh;
