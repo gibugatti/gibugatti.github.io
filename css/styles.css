@@ -1,119 +1,35 @@
-/* Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+/* Fixar o Navbar no topo da página */
 nav {
-      position: fixed;
-      top: 0;
-      width: 100%;
-      background-color: #333;
-      z-index: 1000;
-    }
-    nav ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      display: flex;
-      justify-content: center;
-    }
-    nav ul li {
-      padding: 14px 20px;
-  background: rgba(255, 255, 255, 0.2);
-  border-radius: 5px;
-  transition: 0.3s;
-    }
-    nav ul li a {
-      color: white;
-      text-decoration: none;
-      font-size: 18px;
-  font-weight: bold;
-    }
-    /* Espaço para o conteúdo abaixo do navbar */
-    .content {
-      margin-top: 60px; /* Ajuste conforme o tamanho do navbar */
-    }
-    /* Estilo para os ícones do FontAwesome */
-    .fa {
-      margin-right: 8px;
-    }
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: #333; /* Ajuste a cor de fundo conforme necessário */
+    z-index: 1000; /* Certifique-se de que o navbar fique sobre outros elementos */
+}
+
+/* Ajuste o espaçamento do conteúdo para não ficar atrás do navbar fixo */
 body {
-  background-color: black;
-  color: white;
-  font-family: Arial, sans-serif;
+    padding-top: 60px; /* Ajuste o valor conforme a altura do seu navbar */
 }
 
-/* Cabeçalho */
-header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px;
-  background: rgba(255, 255, 255, 0.1);
-  position: fixed;
-  width: 100%;
-  top: 0;
-  left: 0;
-  z-index: 1000;
+/* Estilo do seu CV */
+.cv {
+    margin-top: 20px; /* Adiciona espaço acima do CV */
+    text-align: center; /* Centraliza o botão do CV */
 }
 
-nav ul li:hover {
-  background: rgba(255, 255, 255, 0.5);
-}
-
-/* Página HOME */
-#home {
-  height: 100vh;
-  background: url('https://source.unsplash.com/1600x900/?technology') no-repeat center center/cover;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  position: relative;
-  padding-top: 100px;
-}
-
-#home h1 {
-  font-size: 50px;
-  margin-bottom: 10px;
-}
-
-#home p {
-  font-size: 20px;
-  margin-bottom: 20px;
-}
-
-/* Botão CV */
-.btn-cv {
-  background: #007bff;
-  color: white;
-  padding: 10px 15px;
-  border-radius: 5px;
-  text-decoration: none;
-  font-weight: bold;
-  margin-bottom: 20px;
-}
-
-.btn-cv:hover {
-  background: #0056b3;
-}
-
-/* Ícones Sociais */
+/* Estilo dos ícones do FontAwesome */
 .social-icons {
-  display: flex;
-  gap: 15px;
-  margin-top: 10px;
-  justify-content: center;
+    margin-top: 20px; /* Adiciona espaço acima dos ícones */
+    text-align: center; /* Centraliza os ícones */
 }
 
 .social-icons a {
-  color: white;
-  font-size: 30px;
-  transition: 0.3s;
+    margin: 0 10px; /* Espaçamento entre os ícones */
+    color: #333; /* Cor dos ícones */
+    font-size: 24px; /* Tamanho dos ícones */
 }
 
 .social-icons a:hover {
-  color: #007bff;
+    color: #555; /* Cor dos ícones ao passar o mouse */
 }
