@@ -5,71 +5,15 @@
   box-sizing: border-box;
 }
 
-/* Fundo animado */
-.animated-background, .matrix, .neon-lines, .circuit {
+/* Fundo animado estilo Matrix */
+canvas {
   position: fixed;
-  width: 100%;
-  height: 100%;
-  z-index: -10; /* Mantém os ícones e textos visíveis */
-}
-
-.animated-background {
-  background: linear-gradient(135deg, #1a1a2e, #16213e);
-  background-size: 200% 200%;
-  animation: move-waves 10s linear infinite;
-}
-
-/* Efeito Matrix */
-@keyframes rain {
-  0% { transform: translateY(-100%); opacity: 0; }
-  50% { opacity: 1; }
-  100% { transform: translateY(100%); opacity: 0; }
-}
-
-.matrix::before {
-  content: "010101110010101011011101010";
-  position: absolute;
-  top: -10%;
-  left: 50%;
-  transform: translateX(-50%);
-  color: #00ff00;
-  font-size: 24px;
-  font-family: monospace;
-  white-space: nowrap;
-  opacity: 0.2;
-  animation: rain 3s linear infinite;
-}
-
-/* Efeito Neon */
-@keyframes neon {
-  0%, 100% { opacity: 0.2; transform: scale(1); }
-  50% { opacity: 1; transform: scale(1.2); }
-}
-
-.neon-lines::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: repeating-linear-gradient(90deg, rgba(0, 255, 255, 0.2) 0px, rgba(0, 255, 255, 0.8) 2px, transparent 4px);
-  animation: neon 3s linear infinite alternate;
-}
-
-/* Circuito Eletrônico */
-@keyframes circuit {
-  0%, 100% { opacity: 0.3; }
-  50% { opacity: 1; }
-}
-
-.circuit::before {
-  content: "";
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background: url('https://www.transparenttextures.com/patterns/circuit-board.png');
-  opacity: 0.5;
-  filter: invert(1);
-  animation: circuit 2s infinite ease-in-out alternate;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: -10; /* Mantém os textos visíveis na frente */
+  background: black;
 }
 
 /* Ajustes Gerais */
@@ -112,7 +56,6 @@ nav ul li a {
 /* Home */
 #home {
   height: 60vh;
-  background: url('https://source.unsplash.com/1600x900/?technology') no-repeat center top/cover;
   display: flex;
   flex-direction: column;
   justify-content: center;
