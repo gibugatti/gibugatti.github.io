@@ -1,40 +1,111 @@
-<!DOCTYPE html>
-<html lang="pt">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Giulia Bugatti - Portfolio</title>
-  <link rel="stylesheet" href="../css/styles.css">
-  <script defer src="script.js"></script>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
-</head>
-<body>
-<nav>
-      <ul>
-        <li><a href="about.html">Sobre</a></li>
-        <li><a href="portfolio.html">Portfólio</a></li>
-        <li><a href="skills.html">Habilidades</a></li>
-        <li><a href="experiences.html">Experiências</a></li>
-        <li><a href="education.html">Formação acadêmica</a></li>
-        <li><a href="certificates.html">Certificados</a></li>
-        <li><a href="contact.html">Contato</a></li>
-      </ul>
-    </nav>
-  <!-- Seção HOME -->
-  <section id="home">
-    <div class="content">
-      <h1>Giulia Bugatti</h1>
-      <p>Desenvolvedora | Cientista de Dados | Especialista em IA</p>
-    </div>
-  </section>
-    <section class="cv">
-    <a href="assets/GIULIA BUGATTI FONSECA - CV (5).docx" download class="btn-cv">Baixar CV</a>
-      </section>
-    <section class="social-icons">
-      <a href="https://github.com/giuliabugatti09" target="_blank"><i class="fa fa-github"></i></a>
-      <a href="https://www.linkedin.com/in/giulia-bugatti-fonseca-226955267/" target="_blank"><i class="fa fa-linkedin"></i></a>
-      <a href="mailto:giuliabugatti02@gmail.com"><i class="fa fa-envelope"></i></a>
-  </section>
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
-</body>
-</html>
+body {
+  background-color: black;
+  color: white;
+  font-family: Arial, sans-serif;
+  padding-top: 80px; /* Ajuste para garantir que o conteúdo não fique atrás do navbar fixo */
+}
+
+/* Cabeçalho */
+nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  transition: background 0.3s;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav ul li {
+  padding: 10px 15px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+nav ul li:hover {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+}
+
+/* Página HOME */
+#home {
+  height: 100vh;
+  background: url('https://source.unsplash.com/1600x900/?technology') no-repeat center center/cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+#home h1 {
+  font-size: 50px;
+  margin-bottom: 10px;
+}
+
+#home p {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+/* Botão CV */
+.cv {
+  margin-top: 20px; /* Adiciona espaço acima do CV */
+  text-align: center; /* Centraliza o botão do CV */
+}
+
+.btn-cv {
+  background: #007bff;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.btn-cv:hover {
+  background: #0056b3;
+}
+
+/* Ícones Sociais */
+.social-icons {
+  display: flex;
+  gap: 15px;
+  margin-top: 10px;
+  justify-content: center;
+}
+
+.social-icons a {
+  color: white;
+  font-size: 30px;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #007bff;
+}
