@@ -4,6 +4,19 @@
   padding: 0;
   box-sizing: border-box;
 }
+h1 {
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: #00ff00;
+    text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00;
+    animation: textAnimation 2s ease-in-out infinite alternate;
+}
+
+p {
+    font-size: 1.2rem;
+    animation: textAnimation 2s ease-in-out 1s infinite alternate;
+}
+
 /* Animação suave do texto */
 @keyframes textAnimation {
     0% {
@@ -16,17 +29,7 @@
     }
 }
 
-/* Gerar números binários espalhados pela tela */
-.binary {
-    position: absolute;
-    font-size: 20px;
-    color: rgba(0, 255, 0, 0.6);
-    white-space: nowrap;
-    animation: binaryFall linear infinite;
-    opacity: 0;
-}
-
-/* Animação de queda de números binários */
+/* Criar chuva de números binários */
 @keyframes binaryFall {
     0% {
         transform: translateY(-100%);
@@ -38,58 +41,75 @@
     }
 }
 
-/* Números binários gerados */
-body::before, body::after {
-    content: "0";
+/* Configurações para os números binários */
+.binary {
     position: absolute;
-    top: 0;
-    left: 10%;
+    font-size: 20px;
+    color: rgba(0, 255, 0, 0.8);
+    white-space: nowrap;
     animation: binaryFall 5s linear infinite;
+    opacity: 0;
+    user-select: none;
 }
 
-body::after {
-    content: "1";
-    left: 15%;
+/* Criando diferentes posições e animações */
+.binary:nth-child(1) {
+    left: 10%;
+    animation-duration: 4s;
+    animation-delay: 0.2s;
+}
+
+.binary:nth-child(2) {
+    left: 20%;
+    animation-duration: 5s;
+    animation-delay: 0.5s;
+}
+
+.binary:nth-child(3) {
+    left: 30%;
     animation-duration: 6s;
+    animation-delay: 0.8s;
 }
 
-/* Criação de números binários aleatórios espalhados */
-@keyframes binarySpread {
-    0% {
-        left: 0;
-    }
-    100% {
-        left: 100%;
-    }
+.binary:nth-child(4) {
+    left: 40%;
+    animation-duration: 7s;
+    animation-delay: 1.2s;
 }
 
-/* Configuração para criar múltiplos números binários */
+.binary:nth-child(5) {
+    left: 50%;
+    animation-duration: 4.5s;
+    animation-delay: 1.4s;
+}
+
+.binary:nth-child(6) {
+    left: 60%;
+    animation-duration: 5.5s;
+    animation-delay: 1.8s;
+}
+
+.binary:nth-child(7) {
+    left: 70%;
+    animation-duration: 6.5s;
+    animation-delay: 2.0s;
+}
+
+.binary:nth-child(8) {
+    left: 80%;
+    animation-duration: 5.0s;
+    animation-delay: 0.9s;
+}
+
+/* Gerar números binários em quantidade */
 @for $i from 1 through 100 {
     .binary:nth-child(#{$i}) {
         top: random(100)%;
-        left: random(100)%;
-        animation-duration: random(4s) + 5s;
+        animation-duration: random(5s) + 5s;
         animation-delay: random(3s);
-        opacity: random(0.5) + 0.5;
+        opacity: random(0.6) + 0.4;
     }
 }
-/* Gerando os números binários */
-body::before {
-    content: "0";
-    position: absolute;
-    top: 0;
-    left: 5%;
-    animation: binaryFall 5s linear infinite;
-}
-
-body::after {
-    content: "1";
-    position: absolute;
-    top: 0;
-    left: 15%;
-    animation: binaryFall 5s linear infinite;
-}
-
 /* Ajustes Gerais */
 body {
   background-color: black;
