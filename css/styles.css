@@ -5,6 +5,19 @@ body {
     color: white;
     background-color: black; /* Mantém fundo escuro para o efeito */
 }
+@keyframes shake {
+    0% { transform: translateX(0); }
+    20% { transform: translateX(-5px); }
+    40% { transform: translateX(5px); }
+    60% { transform: translateX(-5px); }
+    80% { transform: translateX(5px); }
+    100% { transform: translateX(0); }
+}
+
+/* Define a animação quando a classe 'shake' é adicionada */
+#home .content.shake {
+    animation: shake 0.5s ease-in-out;
+}
 
 /* Definir o canvas como fundo */
 canvas {
