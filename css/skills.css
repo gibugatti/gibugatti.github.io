@@ -127,11 +127,12 @@ h2 {
   }
 }
 
-/* Navegação de Páginas (bolinhas) */
+/* Ajuste na navegação das páginas */
 .page-navigation {
   display: flex;
   justify-content: center;
   margin-top: 20px;
+  gap: 10px; /* Espaçamento entre as bolinhas */
 }
 
 .nav-dot {
@@ -139,10 +140,7 @@ h2 {
   height: 12px;
   border-radius: 50%;
   background-color: #00ff00;
-  margin: 0 5px;
-  transition: background-color 0.3s;
-  cursor: pointer;
-}
+
 
 .nav-dot:hover,
 .nav-dot.active {
