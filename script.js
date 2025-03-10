@@ -22,22 +22,24 @@ document.addEventListener("DOMContentLoaded", () => {
 
  let currentPage = 0;
 
-function changePage(pageIndex) {
-  const carousel = document.querySelector('.carousel-items');
-  const navDots = document.querySelectorAll('.nav-dot');
+document.addEventListener("DOMContentLoaded", function() {
+    const carouselItems = document.querySelector('.carousel-items');
+    const navDots = document.querySelectorAll('.nav-dot');
 
-  // Atualiza a página visível
-  carousel.style.transform = `translateX(-${pageIndex * 100}%)`;
+    let currentIndex = 0;
 
-  // Marca o ponto ativo
-  navDots.forEach((dot, index) => {
-    dot.classList.remove('active');
-    if (index === pageIndex) {
-      dot.classList.add('active');
+    function changePage(index) {
+        const offset = -index * 100;
+        carouselItems.style.transform = `translateX(${offset}%)`;
+        navDots.forEach(dot => dot.classList.remove('active'));
+        navDots[index].classList.add('active');
+        currentIndex = index;
     }
-  });
 
-  currentPage = pageIndex;
-}
+    navDots.forEach((dot, index) => {
+        dot.addEventListener('click', () => changePage(index));
+    });
 
-
+    // Inicializar o carrossel na primeira página
+    changePage(currentIndex);
+});
