@@ -12,17 +12,9 @@ function toggleSection(sectionId) {
   document.getElementById(sectionId).classList.remove("hidden");
 }
 let currentPage = 0;
-
-document.addEventListener("DOMContentLoaded", () => {
-  const carousel = document.querySelector(".carousel-items");
-  const pages = document.querySelectorAll(".skill-page");
-  const dots = document.querySelectorAll(".nav-dot");
-
-  let currentIndex = 0;
-
- let currentPage = 0;
-
 document.addEventListener("DOMContentLoaded", function() {
+    console.log("JavaScript carregado corretamente");
+
     const carouselItems = document.querySelector('.carousel-items');
     const navDots = document.querySelectorAll('.nav-dot');
 
@@ -37,9 +29,14 @@ document.addEventListener("DOMContentLoaded", function() {
     }
 
     navDots.forEach((dot, index) => {
-        dot.addEventListener('click', () => changePage(index));
+        dot.addEventListener('click', (event) => {
+            event.preventDefault(); // Evita que o link padrão seja seguido
+            changePage(index);
+        });
     });
 
     // Inicializar o carrossel na primeira página
     changePage(currentIndex);
 });
+
+
