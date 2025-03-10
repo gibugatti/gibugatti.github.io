@@ -26,7 +26,7 @@ header {
 }
 
 .back-button {
-  color: #00ff00; /* Texto verde */
+  color: #00ff00;
   text-decoration: none;
   font-size: 18px;
   font-weight: bold;
@@ -42,14 +42,19 @@ header {
   color: #121212;
 }
 
-/* Seções */
+/* Container branco */
 .container {
   width: 100%;
   max-width: 800px;
+  background-color: #ffffff; /* Fundo branco */
+  color: #121212; /* Texto preto dentro do container */
   text-align: center;
   margin: 20px auto;
+  padding: 20px;
+  border-radius: 10px;
 }
 
+/* Títulos */
 h2 {
   font-size: 28px;
   color: #00ff00; /* Título verde */
@@ -76,39 +81,43 @@ h2 {
 }
 
 .skill {
+  width: 100%;
+  max-width: 500px;
   margin-bottom: 20px;
 }
 
 .skill p {
   font-size: 18px;
   margin-bottom: 5px;
-  color: #00ff00; /* Texto verde */
+  color: #00ff00;
 }
 
-/* Barras de progresso */
+/* Barras de progresso do mesmo tamanho */
 .progress-bar {
   width: 100%;
-  max-width: 500px;
   height: 25px;
-  background: rgba(0, 255, 0, 0.2); /* Verde escuro para contraste */
+  background: rgba(0, 255, 0, 0.2);
   border-radius: 15px;
   overflow: hidden;
   position: relative;
+  max-width: 500px; /* Define um tamanho fixo para todas */
 }
 
+/* Barra verde */
 .progress {
   height: 100%;
-  background: #00ff00; /* Barras verdes */
+  background: #00ff00;
   text-align: right;
   padding-right: 10px;
   line-height: 25px;
   font-weight: bold;
-  color: #121212; /* Texto preto dentro da barra */
+  color: #121212;
   border-radius: 15px;
   width: 0;
   animation: fillProgress 2s forwards;
 }
 
+/* Garantir que todas as barras preencham conforme os valores */
 @keyframes fillProgress {
   from {
     width: 0;
