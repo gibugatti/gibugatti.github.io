@@ -123,6 +123,7 @@ h2 {
   height: 12px;
   border-radius: 50%;
   background-color: #00ff00;
+  cursor: pointer;
 }
 .nav-dot:hover,
 .nav-dot.active {
