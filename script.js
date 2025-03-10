@@ -31,7 +31,7 @@ document.addEventListener("DOMContentLoaded", () => {
     dots.forEach(dot => dot.classList.remove("active"));
     dots[currentIndex].classList.add("active");
   }
-
+ 
   // Adiciona evento para cada bolinha
   dots.forEach((dot, index) => {
     dot.addEventListener("click", (event) => {
