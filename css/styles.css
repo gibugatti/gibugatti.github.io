@@ -1,190 +1,72 @@
-/* Resetando margens, preenchimentos e box-sizing */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* Definindo altura, largura e fonte básica */
-html, body {
-    height: 100%;
-    width: 100%;
-    font-family: Arial, sans-serif; /* Alterado para Arial */
-    overflow: hidden;
-}
-
-/* Estilo básico do body */
-body {
-    background-color: black;
-    color: #fffff;
-    font-size: 20px;
-    position: relative;
-}
-
-/* Título e texto centralizado */
-.content {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    text-align: center;
-    z-index: 2;
-    color: #fffff;
-}
-
-h1 {
-    font-size: 3rem;
-    text-transform: uppercase;
-    color: white;
-    text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00;
-    animation: textAnimation 2s ease-in-out infinite alternate;
-}
-
-p {
-    font-size: 1.2rem;
-    animation: textAnimation 2s ease-in-out 1s infinite alternate;\
-        color: white;
-
-}
-
-/* Animação suave do texto */
-@keyframes textAnimation {
-    0% {
-        transform: scale(1);
-        opacity: 0.8;
-    }
-    100% {
-        transform: scale(1.1);
-        opacity: 1;
-    }
-}
-
-/* Estilo para os números binários caindo em esteira */
-@keyframes binaryFall {
-    0% {
-        transform: translateY(-100%);
-        opacity: 1;
-    }
-    100% {
-        transform: translateY(100vh);
-        opacity: 0;
-    }
-}
-
-/* Estilo para a área onde os números binários caem */
-.matrix {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1; /* Garante que os números fiquem atrás do conteúdo */
-    pointer-events: none;
-}
-
-/* Estilo dos números binários */
-.matrix span {
-    position: absolute;
-    color: #00ff00;
-    font-size: 20px;
-    white-space: nowrap;
-    animation: binaryFall linear infinite;
-    opacity: 0.7;
-    user-select: none;
-}
-
-/* Gerar números binários ao longo da página */
-.matrix span:nth-child(odd) {
-    animation-duration: 7s;
-    animation-delay: 0s;
-}
-
-.matrix span:nth-child(even) {
-    animation-duration: 8s;
-    animation-delay: 1s;
-}
-
-/* Navbar */
-nav {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 20px;
-    background: rgba(255, 255, 255, 0.1);
+/* Defina o canvas para ficar no fundo */
+canvas {
     position: fixed;
-    width: 100%;
     top: 0;
     left: 0;
-    z-index: 1000;
-    transition: background 0.3s;
+    z-index: -1;  /* Garante que o canvas fique atrás do conteúdo */
+    width: 100%;
+    height: 100%;
 }
 
+/* Defina o layout principal */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    color: white;
+}
+
+/* Navegação */
 nav ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
+    list-style-type: none;
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0.7);
+    margin: 0;
+}
+
+nav ul li {
+    display: inline-block;
+    margin-right: 20px;
 }
 
 nav ul li a {
     text-decoration: none;
-    color: white;
-    font-weight: bold;
+    color: #fff;
+    padding: 10px;
+    display: block;
 }
 
-/* Home */
+/* Seção principal */
 #home {
-    height: 60vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
     text-align: center;
-    position: relative;
-    padding-top: 50px;
-    color: #FFFFFF
-
+    padding: 200px 0;
 }
 
 #home h1 {
-    font-size: 50px;
+    font-size: 3rem;
 }
 
-/* Botão CV */
-.cv {
-    margin-top: 15px;
-    text-align: center;
+#home p {
+    font-size: 1.5rem;
 }
 
-.btn-cv {
-    background: #229a00;
-    color: white;
-    padding: 15px 25px;
-    border-radius: 5px;
+/* Botão para o CV */
+.cv .btn-cv {
+    background-color: #00cc33;
+    color: #fff;
+    padding: 10px 20px;
     text-decoration: none;
-    font-weight: bold;
-    margin-bottom: 20px;
-    position: relative;
-    z-index: 1;
+    border-radius: 5px;
 }
 
-.btn-cv:hover {
-    background: #0056b3;
-}
-
-/* Ícones Sociais */
+/* Ícones sociais */
 .social-icons {
-    display: flex;
-    gap: 15px;
-    margin-top: 30px;
-    justify-content: center;
+    text-align: center;
+    margin-top: 20px;
 }
 
 .social-icons a {
-    color: white;
-    font-size: 30px;
-    transition: color 0.3s;
-}
-
-.social-icons a:hover {
     color: #00cc33;
+    font-size: 2rem;
+    margin: 0 15px;
+    text-decoration: none;
 }
