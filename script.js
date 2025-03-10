@@ -20,27 +20,24 @@ document.addEventListener("DOMContentLoaded", () => {
 
   let currentIndex = 0;
 
-  function changePage(index) {
-    if (index < 0 || index >= pages.length) return;
+ let currentPage = 0;
 
-    currentIndex = index;
-    const offset = -currentIndex * 100; 
-    carousel.style.transform = `translateX(${offset}%)`;
+function changePage(pageIndex) {
+  const carousel = document.querySelector('.carousel-items');
+  const navDots = document.querySelectorAll('.nav-dot');
 
-    // Atualiza a classe ativa nos botões de navegação
-    dots.forEach(dot => dot.classList.remove("active"));
-    dots[currentIndex].classList.add("active");
-  }
- 
-  // Adiciona evento para cada bolinha
-  dots.forEach((dot, index) => {
-    dot.addEventListener("click", (event) => {
-      event.preventDefault();
-      changePage(index);
-    });
+  // Atualiza a página visível
+  carousel.style.transform = `translateX(-${pageIndex * 100}%)`;
+
+  // Marca o ponto ativo
+  navDots.forEach((dot, index) => {
+    dot.classList.remove('active');
+    if (index === pageIndex) {
+      dot.classList.add('active');
+    }
   });
 
-  // Define o primeiro como ativo
-  changePage(0);
-});
+  currentPage = pageIndex;
+}
+
 
