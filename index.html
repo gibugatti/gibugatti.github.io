@@ -3,78 +3,174 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Giulia Bugatti - Portfolio</title>
-  <link rel="stylesheet" href="../css/styles.css">
+  <title>Habilidades - Giulia Bugatti</title>
+  <link rel="stylesheet" href="../css/skills.css">
   <script defer src="script.js"></script>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
 </head>
 <body>
-<canvas id="canvas" style="position: absolute; top: 0; left: 0;background: #111;" z-index: -1;"></canvas>
-    <script>
-    var canvas = document.getElementById('canvas');
-    var context = canvas.getContext('2d');
-    var W = window.innerWidth;
-    var H = window.innerHeight;
 
-    canvas.width = W;
-    canvas.height = H;
+  <!-- Menu de Navegação -->
+  <header>
+    <a href="index.html" class="back-button">← Voltar para Home</a>
+  </header>
 
-    var fontSize = 16;
-    var columns = Math.floor(W / fontSize);
-    var drops = [];
-    for(var i = 0; i < columns; i++) {
-        drops.push(0);
-    }
+  <section id="skills">
+    <div class="container">
+      <h2>🚀 Minhas Habilidades</h2>
+      
+      <!-- Carrossel de Habilidades -->
+      <div class="carousel">
+        <div class="carousel-items">
+          
+          <!-- Primeira Página de Habilidades -->
+          <div class="skill-page">
+            <div class="skill">
+              <p>Python</p>
+              <div class="progress-bar"><div class="progress" style="width: 90%;">90%</div></div>
+            </div>
+            <div class="skill">
+              <p>Machine Learning</p>
+              <div class="progress-bar"><div class="progress" style="width: 80%;">80%</div></div>
+            </div>
+            <div class="skill">
+              <p>Deep Learning</p>
+              <div class="progress-bar"><div class="progress" style="width: 70%;">70%</div></div>
+            </div>
+            <div class="skill">
+              <p>Data Science</p>
+              <div class="progress-bar"><div class="progress" style="width: 85%;">85%</div></div>
+            </div>
+            <div class="skill">
+              <p>SQL</p>
+              <div class="progress-bar"><div class="progress" style="width: 85%;">85%</div></div>
+            </div>
+          </div>
 
-    var str = "01"; // Alterado para apenas 0 e 1
+          <!-- Segunda Página de Habilidades -->
+          <div class="skill-page">
+            <div class="skill">
+              <p>JavaScript</p>
+              <div class="progress-bar"><div class="progress" style="width: 75%;">75%</div></div>
+            </div>
+            <div class="skill">
+              <p>Java</p>
+              <div class="progress-bar"><div class="progress" style="width: 60%;">60%</div></div>
+            </div>
+            <div class="skill">
+              <p>PHP</p>
+              <div class="progress-bar"><div class="progress" style="width: 70%;">70%</div></div>
+            </div>
+            <div class="skill">
+              <p>HTML/CSS</p>
+              <div class="progress-bar"><div class="progress" style="width: 90%;">90%</div></div>
+            </div>
+            <div class="skill">
+              <p>React</p>
+              <div class="progress-bar"><div class="progress" style="width: 65%;">65%</div></div>
+            </div>
+          </div>
 
-    function draw() {
-        context.fillStyle = "rgba(0,0,0,0.05)";
-        context.fillRect(0, 0, W, H);
-        context.font = fontSize + "px Courier New"; // Definindo a fonte
-        context.fillStyle = "#00cc33";
+          <!-- Terceira Página de Habilidades -->
+          <div class="skill-page">
+            <div class="skill">
+              <p>Node.js</p>
+              <div class="progress-bar"><div class="progress" style="width: 70%;">70%</div></div>
+            </div>
+            <div class="skill">
+              <p>Cloud Computing (AWS, Azure)</p>
+              <div class="progress-bar"><div class="progress" style="width: 75%;">75%</div></div>
+            </div>
+            <div class="skill">
+              <p>Big Data (Hadoop, Spark)</p>
+              <div class="progress-bar"><div class="progress" style="width: 70%;">70%</div></div>
+            </div>
+            <div class="skill">
+              <p>Data Visualization (Power BI, Tableau)</p>
+              <div class="progress-bar"><div class="progress" style="width: 80%;">80%</div></div>
+            </div>
+            <div class="skill">
+              <p>Git/GitHub</p>
+              <div class="progress-bar"><div class="progress" style="width: 80%;">80%</div></div>
+            </div>
+          </div>
 
-        for(var i = 0; i < columns; i++) {
-            var index = Math.floor(Math.random() * str.length); // Seleciona 0 ou 1
-            var x = i * fontSize;
-            var y = drops[i] * fontSize;
-            context.fillText(str[index], x, y); // Desenha o número binário
-            if(y >= canvas.height && Math.random() > 0.99) {
-                drops[i] = 0; // Reseta o valor do "drop" ao atingir o fundo
-            }
-            drops[i]++;
-        }
-    }
+          <!-- Quarta Página de Habilidades -->
+          <div class="skill-page">
+            <div class="skill">
+              <p>Linux</p>
+              <div class="progress-bar"><div class="progress" style="width: 50%;">50%</div></div>
+            </div>
+            <div class="skill">
+              <p>Docker</p>
+              <div class="progress-bar"><div class="progress" style="width: 65%;">65%</div></div>
+            </div>
+            <div class="skill">
+              <p>Agile (Scrum, Kanban)</p>
+              <div class="progress-bar"><div class="progress" style="width: 75%;">75%</div></div>
+            </div>
+            <div class="skill">
+              <p>REST APIs</p>
+              <div class="progress-bar"><div class="progress" style="width: 60%;">60%</div></div>
+            </div>
+            <div class="skill">
+              <p>NoSQL</p>
+              <div class="progress-bar"><div class="progress" style="width: 70%;">70%</div></div>
+            </div>
+          </div>
 
-    draw();
-    setInterval(draw, 35); // Atualiza a tela a cada 35ms
-</script>
+          <!-- Quinta Página de Habilidades -->
+          <div class="skill-page">
+            <div class="skill">
+              <p>Azure Machine Learning</p>
+              <div class="progress-bar"><div class="progress" style="width: 70%;">70%</div></div>
+            </div>
+            <div class="skill">
+              <p>Jupyter Notebook</p>
+              <div class="progress-bar"><div class="progress" style="width: 75%;">75%</div></div>
+            </div>
+            <div class="skill">
+              <p>Pacote Office</p>
+              <div class="progress-bar"><div class="progress" style="width: 90%;">90%</div></div>
+            </div>
+            <div class="skill">
+              <p>TensorFlow</p>
+              <div class="progress-bar"><div class="progress" style="width: 70%;">70%</div></div>
+            </div>
+            <div class="skill">
+              <p>R</p>
+              <div class="progress-bar"><div class="progress" style="width: 60%;">60%</div></div>
+            </div>
+          </div>
 
-<nav>
-  <ul>
-    <li><a href="../html/about.html">Sobre</a></li>
-    <li><a href="../html/portfolio.html">Portfólio</a></li>
-    <li><a href="../html/skills.html">Habilidades</a></li>
-    <li><a href="../html/experiences.html">Experiências</a></li>
-    <li><a href="../html/education.html">Formação acadêmica</a></li>
-    <li><a href="../html/certificates.html">Certificados</a></li>
-    <li><a href="../html/contact.html">Contato</a></li>
-  </ul>
-</nav>
-<!-- Seção HOME -->
-<section id="home">
-  <div class="content">
-    <h1>Giulia Bugatti</h1>
-    <p>Desenvolvedora | Cientista de Dados | Especialista em IA</p>
-  </div>
-</section>
-<section class="cv">
-  <a href="assets/GIULIA BUGATTI FONSECA - CV (5).docx" download class="btn-cv">Baixar CV</a>
-</section>
-<section class="social-icons">
-  <a href="https://github.com/giuliabugatti09" target="_blank"><i class="fab fa-github"></i></a>
-  <a href="https://www.linkedin.com/in/giulia-bugatti-fonseca-226955267/" target="_blank"><i class="fab fa-linkedin"></i></a>
-  <a href="mailto:giuliabugatti02@gmail.com"><i class="fa fa-envelope"></i></a>
-</section>
+          <!-- Sexta Página de Habilidades -->
+          <div class="skill-page">
+            <div class="skill">
+              <p>Ansible</p>
+              <div class="progress-bar"><div class="progress" style="width: 65%;">65%</div></div>
+            </div>
+            <div class="skill">
+              <p>Jenkins</p>
+              <div class="progress-bar"><div class="progress" style="width: 70%;">70%</div></div>
+            </div>
+            <div class="skill">
+              <p>SonarQube</p>
+              <div class="progress-bar"><div class="progress" style="width: 60%;">60%</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Navegação para a próxima página -->
+      <div class="page-navigation">
+        <a href="#" class="nav-dot" onclick="changePage(0)"></a>
+        <a href="#" class="nav-dot" onclick="changePage(1)"></a>
+        <a href="#" class="nav-dot" onclick="changePage(2)"></a>
+        <a href="#" class="nav-dot" onclick="changePage(3)"></a>
+        <a href="#" class="nav-dot" onclick="changePage(4)"></a>
+        <a href="#" class="nav-dot" onclick="changePage(5)"></a>
+      </div>
+    </div>
+  </section>
+
 </body>
 </html>
