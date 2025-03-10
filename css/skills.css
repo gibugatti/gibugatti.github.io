@@ -5,7 +5,6 @@
   box-sizing: border-box;
   font-family: Arial, sans-serif;
 }
-
 /* Estilo do corpo */
 body {
   background-color: #121212; /* Fundo preto */
@@ -17,14 +16,12 @@ body {
   min-height: 100vh;
   padding: 20px;
 }
-
 /* Cabeçalho */
 header {
   width: 100%;
   text-align: left;
   padding: 20px;
 }
-
 .back-button {
   color: #00ff00;
   text-decoration: none;
@@ -36,62 +33,52 @@ header {
   border-radius: 8px;
   display: inline-block;
 }
-
 .back-button:hover {
   background: #00ff00;
   color: #121212;
 }
-
 /* Container branco */
 .container {
   width: 100%;
   max-width: 800px;
-  background-color: #ffffff; /* Fundo branco */
   color: #121212; /* Texto preto dentro do container */
   text-align: center;
   margin: 20px auto;
   padding: 20px;
   border-radius: 10px;
 }
-
 /* Títulos */
 h2 {
   font-size: 28px;
-  color: #00ff00; /* Título verde */
+  color: white
   margin-bottom: 20px;
 }
-
 /* Carrossel de Habilidades */
 .carousel {
   position: relative;
   width: 100%;
   overflow: hidden;
 }
-
 .carousel-items {
   display: flex;
   transition: transform 0.5s ease-in-out;
 }
-
 .skill-page {
   min-width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-
 .skill {
   width: 100%;
   max-width: 500px;
   margin-bottom: 20px;
 }
-
 .skill p {
   font-size: 18px;
   margin-bottom: 5px;
-  color: #00ff00;
+  color: white;
 }
-
 /* Barras de progresso do mesmo tamanho */
 .progress-bar {
   width: 100%;
@@ -102,7 +89,6 @@ h2 {
   position: relative;
   max-width: 500px; /* Define um tamanho fixo para todas */
 }
-
 /* Barra verde */
 .progress {
   height: 100%;
@@ -116,7 +102,6 @@ h2 {
   width: 0;
   animation: fillProgress 2s forwards;
 }
-
 /* Garantir que todas as barras preencham conforme os valores */
 @keyframes fillProgress {
   from {
@@ -126,7 +111,6 @@ h2 {
     width: 100%;
   }
 }
-
 /* Ajuste na navegação das páginas */
 .page-navigation {
   display: flex;
@@ -134,14 +118,12 @@ h2 {
   margin-top: 20px;
   gap: 10px; /* Espaçamento entre as bolinhas */
 }
-
 .nav-dot {
   width: 12px;
   height: 12px;
   border-radius: 50%;
   background-color: #00ff00;
-
-
+}
 .nav-dot:hover,
 .nav-dot.active {
   background-color: #ffffff;
