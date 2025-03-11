@@ -1,134 +1,95 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Habilidades - Giulia Bugatti</title>
-  <link rel="stylesheet" href="../css/skills.css">
-  <script defer src="../script.js"></script>
-  <style>
-    .carousel {
-      overflow: hidden;
-      width: 100%;
-      position: relative;
-    }
-    .carousel-items {
-      display: flex;
-      transition: transform 0.5s ease-in-out;
-    }
-    .skill-page {
-      min-width: 100%;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-around;
-    }
-    .skill {
-      width: 45%;
-      margin: 10px 0;
-    }
-    .progress-bar {
-      width: 100%;
-      background-color: #ddd;
-      border-radius: 5px;
-      overflow: hidden;
-      position: relative;
-    }
-    .progress {
-      height: 20px;
-      background-color: #4CAF50;
-      text-align: center;
-      color: white;
-      line-height: 20px;
-    }
-    .page-navigation {
-      text-align: center;
-      margin-top: 10px;
-    }
-    .nav-dot {
-      height: 10px;
-      width: 10px;
-      margin: 0 5px;
-      background-color: gray;
-      border-radius: 50%;
-      display: inline-block;
-      cursor: pointer;
-    }
-    .nav-dot.active {
-      background-color: black;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills Carousel</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .carousel-container {
+            width: 80%;
+            max-width: 500px;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .skill {
+            margin-bottom: 20px;
+        }
+        .skill p {
+            margin: 0 0 5px;
+            font-weight: bold;
+        }
+        .skill-bar {
+            width: 100%;
+            background: #ddd;
+            height: 10px;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        .skill-fill {
+            height: 100%;
+            width: 0;
+            background: green;
+            transition: width 1.5s ease-in-out;
+        }
+    </style>
 </head>
 <body>
-  <header>
-    <a href="index.html" class="back-button">← Voltar para Home</a>
-  </header>
-  <section id="skills">
-    <div class="container">
-      <h2>🚀 Minhas Habilidades</h2>
-      <div class="carousel">
-        <div class="carousel-items">
-          <div class="skill-page">
-            <div class="skill">
-              <p>Python</p>
-              <div class="progress-bar"><div class="progress" style="width: 90%;"></div></div>
+    <div class="carousel-container">
+        <div class="carousel">
+            <div class="slide">
+                <div class="skill"><p>Python</p><div class="skill-bar"><div class="skill-fill" style="width: 90%;"></div></div></div>
+                <div class="skill"><p>JavaScript</p><div class="skill-bar"><div class="skill-fill" style="width: 85%;"></div></div></div>
+                <div class="skill"><p>SQL</p><div class="skill-bar"><div class="skill-fill" style="width: 80%;"></div></div></div>
+                <div class="skill"><p>Machine Learning</p><div class="skill-bar"><div class="skill-fill" style="width: 75%;"></div></div></div>
+                <div class="skill"><p>Power BI</p><div class="skill-bar"><div class="skill-fill" style="width: 70%;"></div></div></div>
             </div>
-            <div class="skill">
-              <p>JavaScript</p>
-              <div class="progress-bar"><div class="progress" style="width: 75%;"></div></div>
+            <div class="slide">
+                <div class="skill"><p>React</p><div class="skill-bar"><div class="skill-fill" style="width: 80%;"></div></div></div>
+                <div class="skill"><p>C++</p><div class="skill-bar"><div class="skill-fill" style="width: 65%;"></div></div></div>
+                <div class="skill"><p>Data Analysis</p><div class="skill-bar"><div class="skill-fill" style="width: 85%;"></div></div></div>
+                <div class="skill"><p>Cloud Computing</p><div class="skill-bar"><div class="skill-fill" style="width: 60%;"></div></div></div>
+                <div class="skill"><p>AI Development</p><div class="skill-bar"><div class="skill-fill" style="width: 90%;"></div></div></div>
             </div>
-            <div class="skill">
-              <p>SQL</p>
-              <div class="progress-bar"><div class="progress" style="width: 85%;"></div></div>
+            <div class="slide">
+                <div class="skill"><p>HTML</p><div class="skill-bar"><div class="skill-fill" style="width: 95%;"></div></div></div>
+                <div class="skill"><p>CSS</p><div class="skill-bar"><div class="skill-fill" style="width: 90%;"></div></div></div>
+                <div class="skill"><p>Docker</p><div class="skill-bar"><div class="skill-fill" style="width: 70%;"></div></div></div>
+                <div class="skill"><p>Kubernetes</p><div class="skill-bar"><div class="skill-fill" style="width: 60%;"></div></div></div>
+                <div class="skill"><p>Linux</p><div class="skill-bar"><div class="skill-fill" style="width: 85%;"></div></div></div>
             </div>
-            <div class="skill">
-              <p>React</p>
-              <div class="progress-bar"><div class="progress" style="width: 65%;"></div></div>
-            </div>
-            <div class="skill">
-              <p>Node.js</p>
-              <div class="progress-bar"><div class="progress" style="width: 70%;"></div></div>
-            </div>
-          </div>
-          <div class="skill-page">
-            <div class="skill">
-              <p>Docker</p>
-              <div class="progress-bar"><div class="progress" style="width: 65%;"></div></div>
-            </div>
-            <div class="skill">
-              <p>Linux</p>
-              <div class="progress-bar"><div class="progress" style="width: 50%;"></div></div>
-            </div>
-            <div class="skill">
-              <p>Power BI</p>
-              <div class="progress-bar"><div class="progress" style="width: 80%;"></div></div>
-            </div>
-            <div class="skill">
-              <p>Git/GitHub</p>
-              <div class="progress-bar"><div class="progress" style="width: 80%;"></div></div>
-            </div>
-            <div class="skill">
-              <p>Machine Learning</p>
-              <div class="progress-bar"><div class="progress" style="width: 80%;"></div></div>
-            </div>
-          </div>
         </div>
-      </div>
-      <div class="page-navigation">
-        <span class="nav-dot active" onclick="changePage(0)"></span>
-        <span class="nav-dot" onclick="changePage(1)"></span>
-      </div>
     </div>
-  </section>
-  <script>
-    let currentPage = 0;
-    function changePage(index) {
-      const carousel = document.querySelector('.carousel-items');
-      const dots = document.querySelectorAll('.nav-dot');
-      currentPage = index;
-      carousel.style.transform = `translateX(-${index * 100}%)`;
-      dots.forEach(dot => dot.classList.remove('active'));
-      dots[index].classList.add('active');
-    }
-  </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.carousel').slick({
+                dots: true,
+                infinite: true,
+                speed: 500,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 3000
+            });
+            $('.skill-fill').each(function() {
+                let width = $(this).css('width');
+                $(this).css('width', '0');
+                $(this).animate({ width: width }, 1500);
+            });
+        });
+    </script>
 </body>
 </html>
