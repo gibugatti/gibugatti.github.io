@@ -1,175 +1,125 @@
-<!DOCTYPE html>
-<html lang="pt">
+
+
+  <!DOCTYPE html>
+<html lang="pt-br">
 <head>
-  <meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Habilidades - Giulia Bugatti</title>
-  <link rel="stylesheet" href="../css/skills.css">
-  <script defer src="../script.js"></script>
+  <link rel="stylesheet" href="../css/skills.css">    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <script defer src="../script.js"></script>
+
+   <header>
+    <a href="../index.html" class="back-button">← Voltar para Home</a>
+  </header>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f4f4f4;
+        }
+        .carousel-container {
+            width: 80%;
+            max-width: 500px;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .skill {
+            margin-bottom: 20px;
+        }
+        .skill p {
+            margin: 0 0 5px;
+            font-weight: bold;
+        }
+        .skill-bar {
+            width: 100%;
+            background: #ddd;
+            height: 10px;
+            border-radius: 5px;
+            overflow: hidden;
+        }
+        .skill-fill {
+            height: 100%;
+            width: 0;
+            background: green;
+            transition: width 1.5s ease-in-out;
+        }
+    </style>
 </head>
 <body>
-
-  <!-- Menu de Navegação -->
-  <header>
-    <a href="index.html" class="back-button">← Voltar para Home</a>
-  </header>
-
-  <section id="skills">
-    <div class="container">
-      <h2>🚀 Minhas Habilidades</h2>
-
-      <!-- Carrossel de Habilidades -->
-      <div class="carousel">
-        <div class="carousel-items">
-         <!-- Primeira Página de Habilidades -->
-          <div class="skill-page">
-            <div class="skill">
-              <p>Python</p>
-              <div class="progress-bar"><div class="progress" style="width: 90%;">90%</div></div>
+    <div class="carousel-container">
+        <div class="carousel">
+            <div class="slide">
+                <div class="skill">
+                    <p>Python</p>
+                    <div class="skill-bar"><div class="skill-fill" style="width: 90%;"></div></div>
+                </div>
+                <div class="skill">
+                    <p>JavaScript</p>
+                    <div class="skill-bar"><div class="skill-fill" style="width: 85%;"></div></div>
+                </div>
+                <div class="skill">
+                    <p>SQL</p>
+                    <div class="skill-bar"><div class="skill-fill" style="width: 80%;"></div></div>
+                </div>
+                <div class="skill">
+                    <p>Machine Learning</p>
+                    <div class="skill-bar"><div class="skill-fill" style="width: 75%;"></div></div>
+                </div>
+                <div class="skill">
+                    <p>Power BI</p>
+                    <div class="skill-bar"><div class="skill-fill" style="width: 70%;"></div></div>
+                </div>
             </div>
-            <div class="skill">
-              <p>Machine Learning</p>
-              <div class="progress-bar"><div class="progress" style="width: 80%;">80%</div></div>
+            <div class="slide">
+                <div class="skill">
+                    <p>React</p>
+                    <div class="skill-bar"><div class="skill-fill" style="width: 80%;"></div></div>
+                </div>
+                <div class="skill">
+                    <p>C++</p>
+                    <div class="skill-bar"><div class="skill-fill" style="width: 65%;"></div></div>
+                </div>
+                <div class="skill">
+                    <p>Data Analysis</p>
+                    <div class="skill-bar"><div class="skill-fill" style="width: 85%;"></div></div>
+                </div>
+                <div class="skill">
+                    <p>Cloud Computing</p>
+                    <div class="skill-bar"><div class="skill-fill" style="width: 60%;"></div></div>
+                </div>
+                <div class="skill">
+                    <p>AI Development</p>
+                    <div class="skill-bar"><div class="skill-fill" style="width: 90%;"></div></div>
+                </div>
             </div>
-            <div class="skill">
-              <p>Deep Learning</p>
-              <div class="progress-bar"><div class="progress" style="width: 70%;">70%</div></div>
-            </div>
-            <div class="skill">
-              <p>Data Science</p>
-              <div class="progress-bar"><div class="progress" style="width: 85%;">85%</div></div>
-            </div>
-            <div class="skill">
-              <p>SQL</p>
-              <div class="progress-bar"><div class="progress" style="width: 85%;">85%</div></div>
-            </div>
-          </div>
-
-          <!-- Segunda Página de Habilidades -->
-          <div class="skill-page">
-            <div class="skill">
-              <p>JavaScript</p>
-              <div class="progress-bar"><div class="progress" style="width: 75%;">75%</div></div>
-            </div>
-            <div class="skill">
-              <p>Java</p>
-              <div class="progress-bar"><div class="progress" style="width: 60%;">60%</div></div>
-            </div>
-            <div class="skill">
-              <p>PHP</p>
-              <div class="progress-bar"><div class="progress" style="width: 70%;">70%</div></div>
-            </div>
-            <div class="skill">
-              <p>HTML/CSS</p>
-              <div class="progress-bar"><div class="progress" style="width: 90%;">90%</div></div>
-            </div>
-            <div class="skill">
-              <p>React</p>
-              <div class="progress-bar"><div class="progress" style="width: 65%;">65%</div></div>
-            </div>
-          </div>
-
-          <!-- Terceira Página de Habilidades -->
-          <div class="skill-page">
-            <div class="skill">
-              <p>Node.js</p>
-              <div class="progress-bar"><div class="progress" style="width: 70%;">70%</div></div>
-            </div>
-            <div class="skill">
-              <p>Cloud Computing (AWS, Azure)</p>
-              <div class="progress-bar"><div class="progress" style="width: 75%;">75%</div></div>
-            </div>
-            <div class="skill">
-              <p>Big Data (Hadoop, Spark)</p>
-              <div class="progress-bar"><div class="progress" style="width: 70%;">70%</div></div>
-            </div>
-            <div class="skill">
-              <p>Data Visualization (Power BI, Tableau)</p>
-              <div class="progress-bar"><div class="progress" style="width: 80%;">80%</div></div>
-            </div>
-            <div class="skill">
-              <p>Git/GitHub</p>
-              <div class="progress-bar"><div class="progress" style="width: 80%;">80%</div></div>
-            </div>
-          </div>
-
-          <!-- Quarta Página de Habilidades -->
-          <div class="skill-page">
-            <div class="skill">
-              <p>Linux</p>
-              <div class="progress-bar"><div class="progress" style="width: 50%;">50%</div></div>
-            </div>
-            <div class="skill">
-              <p>Docker</p>
-              <div class="progress-bar"><div class="progress" style="width: 65%;">65%</div></div>
-            </div>
-            <div class="skill">
-              <p>Agile (Scrum, Kanban)</p>
-              <div class="progress-bar"><div class="progress" style="width: 75%;">75%</div></div>
-            </div>
-            <div class="skill">
-              <p>REST APIs</p>
-              <div class="progress-bar"><div class="progress" style="width: 60%;">60%</div></div>
-            </div>
-            <div class="skill">
-              <p>NoSQL</p>
-              <div class="progress-bar"><div class="progress" style="width: 70%;">70%</div></div>
-            </div>
-          </div>
-
-          <!-- Quinta Página de Habilidades -->
-          <div class="skill-page">
-            <div class="skill">
-              <p>Azure Machine Learning</p>
-              <div class="progress-bar"><div class="progress" style="width: 70%;">70%</div></div>
-            </div>
-            <div class="skill">
-              <p>Jupyter Notebook</p>
-              <div class="progress-bar"><div class="progress" style="width: 75%;">75%</div></div>
-            </div>
-            <div class="skill">
-              <p>Pacote Office</p>
-              <div class="progress-bar"><div class="progress" style="width: 90%;">90%</div></div>
-            </div>
-            <div class="skill">
-              <p>TensorFlow</p>
-              <div class="progress-bar"><div class="progress" style="width: 70%;">70%</div></div>
-            </div>
-            <div class="skill">
-              <p>R</p>
-              <div class="progress-bar"><div class="progress" style="width: 60%;">60%</div></div>
-            </div>
-          </div>
-
-          <!-- Sexta Página de Habilidades -->
-          <div class="skill-page">
-            <div class="skill">
-              <p>Ansible</p>
-              <div class="progress-bar"><div class="progress" style="width: 65%;">65%</div></div>
-            </div>
-            <div class="skill">
-              <p>Jenkins</p>
-              <div class="progress-bar"><div class="progress" style="width: 70%;">70%</div></div>
-            </div>
-            <div class="skill">
-              <p>SonarQube</p>
-              <div class="progress-bar"><div class="progress" style="width: 60%;">60%</div></div>
-            </div>
-          </div>
         </div>
-      </div>
-
-      <!-- Navegação para a próxima página -->
-      <div class="page-navigation">
-        <a href="#" class="nav-dot" onclick="changePage(0)"></a>
-        <a href="#" class="nav-dot" onclick="changePage(1)"></a>
-        <a href="#" class="nav-dot" onclick="changePage(2)"></a>
-        <a href="#" class="nav-dot" onclick="changePage(3)"></a>
-        <a href="#" class="nav-dot" onclick="changePage(4)"></a>
-        <a href="#" class="nav-dot" onclick="changePage(5)"></a>
-      </div>
     </div>
-  </section>
-
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('.carousel').slick({
+                dots: true,
+                infinite: true,
+                speed: 500,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                autoplay: true,
+                autoplaySpeed: 3000
+            });
+        });
+    </script>
 </body>
 </html>
+
+
+ 
