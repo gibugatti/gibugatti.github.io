@@ -13,6 +13,37 @@ body {
         opacity: 1;
     }
 }
+.animated-role {
+    display: block; /* Mostra os cargos um abaixo do outro */
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: #00cc33;
+    opacity: 0;
+    animation: fadeEffect 6s infinite;
+}
+
+.animated-role:nth-child(1) {
+    animation-delay: 0s; /* Primeiro cargo aparece primeiro */
+}
+
+.animated-role:nth-child(2) {
+    animation-delay: 2s; /* Segundo cargo aparece depois de 2s */
+}
+
+.animated-role:nth-child(3) {
+    animation-delay: 4s; /* Terceiro cargo aparece depois de 4s */
+}
+
+@keyframes fadeEffect {
+    0%, 100% {
+        opacity: 0;
+        transform: translateY(10px); /* Movimenta para baixo no início e no final */
+    }
+    50% {
+        opacity: 1;
+        transform: translateY(0); /* Alinha no centro durante a exibição */
+    }
+}
 
 /* Define a animação quando a classe 'fade-in' é adicionada */
 #home .content.fade-in {
