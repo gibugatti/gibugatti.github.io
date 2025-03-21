@@ -3,7 +3,6 @@ body {
     margin: 0;
     font-family: 'Arial', sans-serif;
     color: white;
-    background-color: black; /* Mantém fundo escuro para o efeito */
 }
 @keyframes fadeIn {
     from {
