@@ -15,28 +15,36 @@ let currentPage = 0;
 document.addEventListener("DOMContentLoaded", function() {
     console.log("JavaScript carregado corretamente");
 
-    const carouselItems = document.querySelector('.carousel-items');
-    const navDots = document.querySelectorAll('.nav-dot');
 
-    let currentIndex = 0;
+const roles = ["Desenvolvedora", "Cientista de Dados", "Especialista em IA"];
+let currentRole = 0;
+let charIndex = 0;
+const typingSpeed = 150; // Velocidade da digitação
+const deletingSpeed = 100; // Velocidade de apagar
+const delayBetweenRoles = 2000; // Intervalo entre os cargos
+const typingEffectElement = document.getElementById("typing-effect");
 
-    function changePage(index) {
-        const offset = -index * 100;
-        carouselItems.style.transform = `translateX(${offset}%)`;
-        navDots.forEach(dot => dot.classList.remove('active'));
-        navDots[index].classList.add('active');
-        currentIndex = index;
+function typeRole() {
+    if (charIndex < roles[currentRole].length) {
+        typingEffectElement.textContent += roles[currentRole].charAt(charIndex);
+        charIndex++;
+        setTimeout(typeRole, typingSpeed);
+    } else {
+        setTimeout(deleteRole, delayBetweenRoles);
     }
+}
 
-    navDots.forEach((dot, index) => {
-        dot.addEventListener('click', (event) => {
-            event.preventDefault(); // Evita que o link padrão seja seguido
-            changePage(index);
-        });
-    });
+function deleteRole() {
+    if (charIndex > 0) {
+        typingEffectElement.textContent = roles[currentRole].substring(0, charIndex - 1);
+        charIndex--;
+        setTimeout(deleteRole, deletingSpeed);
+    } else {
+        currentRole = (currentRole + 1) % roles.length; // Avança para o próximo cargo
+        setTimeout(typeRole, typingSpeed);
+    }
+}
 
-    // Inicializar o carrossel na primeira página
-    changePage(currentIndex);
-});
+typeRole(); // Inicia o efeito
 
 
