@@ -19,6 +19,7 @@ body {
     line-height: 1.8; /* Melhor espaçamento entre linhas */
     color: white; /* Texto branco */
     margin: 20px 0; /* Espaçamento acima e abaixo */
+    width:20vw;
 }
 
 .animated-role {
