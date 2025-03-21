@@ -21,6 +21,103 @@ body {
     opacity: 0;
     animation: fadeEffect 6s infinite;
 }
+/* Estilizando a seção HOME */
+#home {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px;
+    background-color: black; /* Fundo preto */
+    color: white; /* Texto branco */
+}
+
+/* Estilização do lado esquerdo (Nome, cargos e resumo) */
+#home .content {
+    flex: 1;
+    text-align: left;
+    margin-right: 20px;
+    min-width: 280px;
+}
+
+#home h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+#home p {
+    font-size: 1rem;
+    line-height: 1.8;
+    color: white;
+    margin-bottom: 20px;
+}
+
+/* Estilização do texto com efeito de digitação */
+#typing-effect {
+    font-size: 1.2rem;
+    font-weight: bold;
+    font-family: monospace; /* Fonte que simula digitação */
+    color: #00cc33;
+    border-right: 2px solid #00cc33; /* Simula o cursor piscante */
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+    animation: blinkCursor 0.7s step-end infinite;
+}
+
+@keyframes blinkCursor {
+    50% {
+        border-color: transparent;
+    }
+}
+
+/* Estilização do lado direito (Foto e Botões) */
+#home img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    border: 3px solid #00cc33;
+    margin-bottom: 20px;
+}
+
+#home .buttons {
+    text-align: center;
+    margin-top: 30px;
+}
+
+#home .buttons a {
+    text-decoration: none;
+    color: white;
+    background-color: #00cc33;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    display: inline-block;
+}
+
+#home .buttons a:hover {
+    background-color: #00992a; /* Cor mais escura ao passar o mouse */
+}
+
+#home .buttons .icons a {
+    margin: 0 10px;
+    color: #333;
+    font-size: 1.5rem;
+}
+
+#home .buttons .icons a.github {
+    color: #333;
+}
+
+#home .buttons .icons a.linkedin {
+    color: #0077b5;
+}
+
+#home .buttons .icons a.mail {
+    color: #d93025;
+}
+
 /* Estilizando a seção Sobre */
 #about {
     padding: 50px 15px;
@@ -42,6 +139,19 @@ body {
     margin-bottom: 20px;
     border: 5px solid #00cc33;
     object-fit: cover;
+}
+#typing-effect {
+    border-right: 2px solid #00cc33;
+    white-space: nowrap;
+    overflow: hidden;
+    display: inline-block;
+    animation: blinkCursor 0.7s step-end infinite;
+}
+
+@keyframes blinkCursor {
+    50% {
+        border-color: transparent;
+    }
 }
 
 #about p {
