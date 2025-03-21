@@ -20,6 +20,7 @@ body {
     color: white; /* Texto branco */
     margin: 20px 0; /* Espaçamento acima e abaixo */
     width:20vw;
+    margin-top:60%;
 }
 
 .animated-role {
