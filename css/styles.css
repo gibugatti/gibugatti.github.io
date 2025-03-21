@@ -13,6 +13,14 @@ body {
         opacity: 1;
     }
 }
+#about-text {
+    text-align: left; /* Alinha o texto à esquerda */
+    font-size: 1.2rem; /* Tamanho de fonte ajustado */
+    line-height: 1.8; /* Melhor espaçamento entre linhas */
+    color: white; /* Texto branco */
+    margin: 20px 0; /* Espaçamento acima e abaixo */
+}
+
 .animated-role {
     display: block; /* Mostra os cargos um abaixo do outro */
     font-size: 1.5rem;
