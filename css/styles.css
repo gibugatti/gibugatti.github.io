@@ -115,15 +115,15 @@ body {
 }
 
 #home .buttons .icons a.github {
-    color: #333;
+    color: white;
 }
 
 #home .buttons .icons a.linkedin {
-    color: #0077b5;
+    color: white;
 }
 
 #home .buttons .icons a.mail {
-    color: #d93025;
+    color: white;
 }
 
 /* Estilizando a seção Sobre */
@@ -263,6 +263,8 @@ nav ul li a {
 
 #home p {
     font-size: 1.5rem;
+    color:white;
+    width: 30vw;
 }
 
 /* Botão do CV */
