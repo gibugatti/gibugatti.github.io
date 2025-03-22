@@ -58,6 +58,7 @@ body {
     line-height: 1.8;
     color: white;
     margin-bottom: 20px;
+    width: 30vw;
 }
 
 /* Estilização do texto com efeito de digitação */
@@ -261,16 +262,10 @@ nav ul li a {
     letter-spacing: 3px;
 }
 
-#home p {
-    font-size: 1.5rem;
-    color:white;
-    width: 30vw;
-}
-
 /* Botão do CV */
 .cv {
     text-align: center;
-    margin-top: 20px;
+    margin-top: 40px;
 }
 
 .cv .btn-cv {
