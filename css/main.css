@@ -166,7 +166,7 @@ p.lead {
 	font-family: "lora-regular", serif;
 	font-size: 2rem;
 	line-height: 1.8;
-	color: #888888;
+	color: #FFFFF;
 }
 @media only screen and (max-width:768px) {
 	p.lead {
@@ -1503,7 +1503,7 @@ header .logo a {
  * ------------------------------------------------------------------- 
  */
 #about {
-	background: #FFFFFF;
+	background: #FFFFFF !important;
 	padding-top: 12rem;
 	padding-bottom: 15rem;
 }
