@@ -594,7 +594,7 @@ input[type="url"]:focus,
 input[type="password"]:focus,
 textarea:focus,
 select:focus {
-	color: #cc005f;
+	color: #5500aa;
 	border-bottom: 1px solid #FF0077;
 }
 label, legend {
@@ -1337,7 +1337,7 @@ header .logo a {
 	text-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 .intro-content h5 {
-	color: #cc005f;
+	color: #5500aa;
 	font-family: "poppins-bold", sans-serif;
 	font-size: 2.3rem;
 	line-height: 1.565;
@@ -1384,7 +1384,7 @@ header .logo a {
 	letter-spacing: .25rem;
 }
 .intro-content .button:hover, .intro-content .button:focus {
-	border-color: #cc005f;
+	border-color: #5500aa;
 }
 .intro-content .button::after {
 	display: inline-block;
@@ -1419,7 +1419,7 @@ header .logo a {
 	color: #FFFFFF;
 }
 .intro-social li a:hover, .intro-social li a:focus {
-	color: #cc005f;
+	color: #5500aa;
 }
 
 /**
@@ -1652,6 +1652,10 @@ header .logo a {
 	position: absolute;
 	left: 35%;
 	top: 0;
+}
+.owl-carousel .owl-item {
+    float: left;
+    margin-top: 5%;
 }
 #resume .timeline-block {
 	position: relative;
@@ -1959,7 +1963,7 @@ header .logo a {
 	border-right: 1px solid rgba(200, 200, 200, 0.1);
 }
 .popup-modal .link-box a:hover {
-	background: #cc005f;
+	background: #5500aa;
 	border: none;
 }
 @media only screen and (max-width:600px) {
@@ -2168,6 +2172,7 @@ header .logo a {
 	display: block;
 	width: 1.2rem;
 	height: 1.2rem;
+	margin-top: 
 	margin: 1.2rem .8rem 0 .8rem;
 	border-radius: 50%;
 	display: inline-block;
@@ -2475,7 +2480,7 @@ header .logo a {
 	color: #FFFFFF;
 }
 #contact button.submitform:hover, #contact button.submitform:focus {
-	background: #cc005f;
+	background: #5500aa;
 }
 #message-warning, #message-success {
 	display: none;
@@ -2687,7 +2692,7 @@ footer .copyright span:last-child::after {
 	width: 6rem;
 	line-height: 6.6rem;
 	text-align: center;
-	background: #cc005f;
+	background: #5500aa;
 	color: #FFFFFF;
 	text-align: center;
 	text-transform: uppercase;
