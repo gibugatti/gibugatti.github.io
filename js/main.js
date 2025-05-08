@@ -24,11 +24,13 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Ajustar canvas ao tamanho da tela
     function resizeCanvas() {
-        canvas.width = window.innerWidth;
-        canvas.height = window.innerHeight;
-        columns = Math.floor(canvas.width / fontSize);
-        resetDrops();
-    }
+    const parent = canvas.parentElement;
+    canvas.width = parent.clientWidth;
+    canvas.height = parent.clientHeight;
+    columns = Math.floor(canvas.width / fontSize);
+    resetDrops();
+}
+
     
     // Resetar gotas quando a tela for redimensionada
     function resetDrops() {
