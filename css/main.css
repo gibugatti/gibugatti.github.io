@@ -1046,7 +1046,7 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 .section-intro h1 {
 	font-family: "poppins-semibold", serif;
 	font-size: 3.6rem;
-	color: #313131;
+	color: #fffff;
 	line-height: 1.25;
 	margin-bottom: 1.2rem;
 }
@@ -1550,7 +1550,7 @@ header .logo a {
 }
 .about-content .info-list li strong {
 	font-family: "poppins-bold", sans-serif;
-	color: #313131;
+	color: #fffff;
 	text-transform: uppercase;
 	letter-spacing: .2rem;
 	font-size: 1.5rem;
