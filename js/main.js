@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', function() {
         ctx.fillRect(0, 0, canvas.width, canvas.height);
         
         // Cor e estilo do texto
-        ctx.fillStyle = '#00ff88';
+        ctx.fillStyle = '#5500aa';
         ctx.font = `${fontSize}px monospace`;
         
         // Desenhar caracteres
