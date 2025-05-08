@@ -76,7 +76,17 @@ body {
 	line-height: 3rem;
 	color: #6e6e6e;
 }
-
+/* Efeito Matrix - Ajustado para ficar apenas no fundo da hero section */
+#matrixCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+    opacity: 0.3;
+}
 /**
  * links - (_document-setup.scss)
  * -------------------------------------------------------------------
