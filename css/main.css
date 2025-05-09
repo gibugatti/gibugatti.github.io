@@ -1046,12 +1046,12 @@ button::-moz-focus-inner, input::-moz-focus-inner {
 .section-intro h1 {
 	font-family: "poppins-semibold", serif;
 	font-size: 3.6rem;
-	color: #fffff;
+	color: white;
 	line-height: 1.25;
 	margin-bottom: 1.2rem;
 }
 .section-intro h5 {
-	color: #5500aa;
+	color: white;
 	font-size: 1.6rem;
 	line-height: 1.875;
 	margin-bottom: 0.3rem;
