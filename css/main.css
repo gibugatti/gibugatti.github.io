@@ -1430,29 +1430,27 @@ header .logo a {
 	color: #5500aa;
 }
 .intro-social2 {
-	display: block;
-	position: absolute;
-	width: 100%;
-	left: 0;
-	bottom: 7.2rem;
-	font-size: 3.3rem;
-	margin-top: 20%;
+	display: flex;
+	justify-content: center;
+	margin-top: 2rem;
 	padding: 0;
+	list-style: none;
 }
+
 .intro-social2 li {
-	display: inline-block;
-	margin: 2.0px;
-	padding: 0;
+	margin: 0 10px;
 }
+
 .intro-social2 i {
-	font-size: 3.3rem;
+	font-size: 2.5rem;
+	color: #fff;
+	transition: color 0.3s;
 }
-.intro-social2 li a, .intro-social li a:visited {
-	color: #FFFFFF;
-}
-.intro-social2 li a:hover, .intro-social li a:focus {
+
+.intro-social2 li a:hover i {
 	color: #5500aa;
 }
+
 /**
  * responsive:
  * Intro
